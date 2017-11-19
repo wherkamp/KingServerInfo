@@ -25,22 +25,22 @@ public class ServerInfoCommand extends BukkitCommand {
 
     @Override
     public boolean execute(CommandSender sender, String s, String[] args) {
-        if(sender instanceof Player) {
+        if (sender instanceof Player) {
             Player player = (Player) sender;
             if (args[0].equalsIgnoreCase("reload")) {
-                if(player.hasPermission("kingserverinfo.kingserverinfocommand.reload")) {
+                if (player.hasPermission("kingserverinfo.kingserverinfocommand.reload")) {
                     plugin.getConfigSettings().getAllSettings();
-                }else{
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&',"You do not have permission to fun this command"));
+                } else {
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', "You do not have permission to fun this command"));
                 }
             }
-        }else{
-            if(args[0].equalsIgnoreCase("reload")){
+        } else {
+            if (args[0].equalsIgnoreCase("reload")) {
                 plugin.getConfigSettings().getAllSettings();
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "Updated Config"));
 
 
-            }else{
+            } else {
                 sender.sendMessage("You must be a player to run this command");
             }
         }

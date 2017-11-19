@@ -4,7 +4,7 @@ public class ConfigSettings {
     private ConfigManager configManager;
     private String prefix, ServerInfoCommand, ServerInfoDescription;
 
-    public ConfigSettings(ConfigManager configManager){
+    public ConfigSettings(ConfigManager configManager) {
         this.configManager = configManager;
         getAllSettings();
     }

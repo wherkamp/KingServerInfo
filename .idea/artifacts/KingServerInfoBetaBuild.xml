@@ -2,8 +2,8 @@
   <artifact type="jar" name="KingServerInfoBetaBuild">
     <output-path>$PROJECT_DIR$/out/artifacts/KingServerInfoBetaBuild</output-path>
     <root id="archive" name="KingServerInfoBetaBuild.jar">
-      <element id="file-copy" path="$PROJECT_DIR$/src/resources/config.yml" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/resources/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/resources/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/resources/plugin.yml" />
       <element id="module-output" name="KingServerInfo" />
     </root>
   </artifact>

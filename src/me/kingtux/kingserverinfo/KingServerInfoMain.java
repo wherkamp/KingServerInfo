@@ -13,12 +13,12 @@ import java.lang.reflect.Field;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class KingServerInfoMain extends JavaPlugin{
+public class KingServerInfoMain extends JavaPlugin {
     private ConfigManager configManager;
     private ConfigSettings configSettings;
     public Logger logger = Bukkit.getLogger();
 
-    public void onEnable(){
+    public void onEnable() {
         configManager = new ConfigManager(this);
         configManager.setupConfig();
 
@@ -34,24 +34,24 @@ public class KingServerInfoMain extends JavaPlugin{
             commandMap.register(configSettings.getServerInfoCommand(), new ServerInfoCommand(configSettings.getServerInfoCommand(), configSettings.getServerInfoDescription(), this));
 
 
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
 
     }
-    public  void onDisable(){
+
+    public void onDisable() {
 
     }
-    public void setConfigSettings(ConfigSettings cF){
+
+    public ConfigSettings getConfigSettings() {
+        return configSettings;
+    }
+
+    public void setConfigSettings(ConfigSettings cF) {
         this.configSettings = cF;
     }
-    public ConfigSettings getConfigSettings(){
-       return configSettings;
-    }
-
-
-
 
 
 }
