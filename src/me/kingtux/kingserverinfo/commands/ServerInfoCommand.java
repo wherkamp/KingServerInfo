@@ -48,6 +48,8 @@ public class ServerInfoCommand extends BukkitCommand {
                     } else {
                         player.sendMessage(translateAlternateColorCodes('&', "You do not have permission to fun this command"));
                     }
+                } else if (args[0].equalsIgnoreCase("media")) {
+                    player.openInventory(plugin.getMediaGui().createMediaGui());
                 }
 
             }

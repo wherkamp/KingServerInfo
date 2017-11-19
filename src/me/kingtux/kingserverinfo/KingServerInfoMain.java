@@ -2,6 +2,8 @@ package me.kingtux.kingserverinfo;
 
 
 import me.kingtux.kingserverinfo.commands.ServerInfoCommand;
+import me.kingtux.kingserverinfo.events.ClickEvent;
+import me.kingtux.kingserverinfo.utils.MediaGui.MediaGui;
 import me.kingtux.kingserverinfo.utils.config.ConfigManager;
 import me.kingtux.kingserverinfo.utils.config.ConfigSettings;
 import org.bukkit.Bukkit;
@@ -17,6 +19,7 @@ public class KingServerInfoMain extends JavaPlugin {
     private ConfigManager configManager;
     private ConfigSettings configSettings;
     public Logger logger = Bukkit.getLogger();
+    private MediaGui mediaGui;
 
     public void onEnable() {
         configManager = new ConfigManager(this);
@@ -38,7 +41,8 @@ public class KingServerInfoMain extends JavaPlugin {
             e.printStackTrace();
         }
 
-
+        mediaGui = new MediaGui(this);
+        Bukkit.getServer().getPluginManager().registerEvents(new ClickEvent(this), this);
     }
 
     public void onDisable() {
@@ -54,4 +58,7 @@ public class KingServerInfoMain extends JavaPlugin {
     }
 
 
+    public MediaGui getMediaGui() {
+        return mediaGui;
+    }
 }

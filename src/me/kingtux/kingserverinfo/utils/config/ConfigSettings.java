@@ -1,6 +1,7 @@
 package me.kingtux.kingserverinfo.utils.config;
 
 import me.kingtux.kingserverinfo.utils.JsonManager;
+import me.kingtux.kingserverinfo.utils.MediaGui.Items;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -10,10 +11,13 @@ import java.util.List;
 
 public class ConfigSettings {
     private ConfigManager configManager;
-    private String prefix, serverInfoCommand, serverInfoDescription, ownerInfo;
+    private int mediaSize;
+    private String prefix, serverInfoCommand, serverInfoDescription, ownerInfo, guiTitle;
     private List<String> baseCommandDataInfo, rules, onJoinBroudcastMessage, onJoinPersonalMessage, onLeaveMessage;
     private ArrayList<TextComponent> staffList;
+    private ArrayList<Items> guiItems;
     private Player owner;
+
     public ConfigSettings(ConfigManager configManager) {
         this.configManager = configManager;
         getAllSettings();
@@ -32,9 +36,30 @@ public class ConfigSettings {
         onLeaveMessage = configManager.getMainConfig().getStringList("OnLeave-Event.Broudcast-Message");
         owner = Bukkit.getServer().getPlayer(configManager.getMainConfig().getString("Staff.Owner.Owner-Name"));
         ownerInfo = configManager.getMainConfig().getString("Staff.Owner.Owner-Info");
+        mediaSize = configManager.getMainConfig().getInt("Media.Size");
+        guiTitle = configManager.getMainConfig().getString("Media.Title");
 
+
+        getMediaGuifromConfig();
         getStaffFromConfig();
     }
+
+    private void getMediaGuifromConfig() {
+        guiItems = new ArrayList<Items>();
+
+        for (final String ItemName : configManager.getMainConfig().getConfigurationSection("Media.Items").getKeys(false)) {
+            String Position = "Media.Items." + ItemName;
+            Items NewItem = new Items(configManager.getMainConfig().getInt(Position + ".Icon.Position"),
+                    configManager.getMainConfig().getString(Position + ".Icon.Name"),
+                    configManager.getMainConfig().getString(Position + ".Icon.Item-Name"),
+                    configManager.getMainConfig().getString(Position + ".Icon.Item"),
+                    configManager.getMainConfig().getString(Position + ".Link"),
+                    configManager.getMainConfig().getBoolean(Position + ".Icon.Clickable"),
+                    configManager.getMainConfig().getStringList(Position + ".Icon.Sub-Text"));
+            guiItems.add(NewItem);
+        }
+    }
+
 
     private void getStaffFromConfig() {
         staffList = new ArrayList<TextComponent>();
@@ -86,4 +111,17 @@ public class ConfigSettings {
     public Player getOwner() {
         return owner;
     }
+
+    public String getGuiTitle() {
+        return guiTitle;
+    }
+
+    public int getMediaSize() {
+        return mediaSize;
+    }
+
+    public ArrayList<Items> getGuiItems() {
+        return guiItems;
+    }
+
 }

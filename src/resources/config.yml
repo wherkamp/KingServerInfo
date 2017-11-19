@@ -32,4 +32,21 @@ Staff:
          Staff-Info: 'He is our Leaders greatest assistant'
       FedoraCraft:
          Staff-Info: 'He is useless'
+Media:
+   Size: 9
+   Title: 'Media gui for KingServerInfo'
+   Items:
+      Website:
+         Link: http://wherkamp.github.io
+         Icon:
+            Item: PAPER
+            clickable: true
+            Position: 1
+            Item-Name: Website
+            Sub-Text:
+               - 'Click Here to go to our Website'
+
+#Avaible Place Holders
+#PlaceHolders:
+#   - {player}
 
