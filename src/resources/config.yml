@@ -1,6 +1,6 @@
 #KingServerInfo by KingTux
 #Website wherkamp.github.io
-prefix: [ServerInfo]
+prefix: '[ServerInfo]&r'
 
 BaseCommand: serverinfo
 
@@ -15,7 +15,7 @@ Rules:
 
 OnJoin-Event:
    Broudcast-Message:
-      - 'Welcome {player to the server}'
+      - 'Welcome {player} to the server'
    Personal-Message:
       - 'Stay awhile and listen'
 OnLeave-Event:
@@ -32,6 +32,7 @@ Staff:
          Staff-Info: 'He is our Leaders greatest assistant'
       FedoraCraft:
          Staff-Info: 'He is useless'
+
 Media:
    Size: 9
    Title: 'Media gui for KingServerInfo'
@@ -40,7 +41,7 @@ Media:
          Link: http://wherkamp.github.io
          Icon:
             Item: PAPER
-            clickable: true
+            Clickable: true
             Position: 1
             Item-Name: Website
             Sub-Text:

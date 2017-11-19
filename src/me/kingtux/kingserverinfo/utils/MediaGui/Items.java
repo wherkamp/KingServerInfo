@@ -50,4 +50,17 @@ public class Items {
     public List<String> getSubText() {
         return subText;
     }
+
+    @Override
+    public String toString() {
+        return "Items{" +
+                "position=" + position +
+                ", link=" + link +
+                ", name='" + name + '\'' +
+                ", itemName='" + itemName + '\'' +
+                ", itemType='" + itemType + '\'' +
+                ", clickable=" + clickable +
+                ", subText=" + subText +
+                '}';
+    }
 }

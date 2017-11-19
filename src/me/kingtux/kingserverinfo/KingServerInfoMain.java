@@ -3,6 +3,8 @@ package me.kingtux.kingserverinfo;
 
 import me.kingtux.kingserverinfo.commands.ServerInfoCommand;
 import me.kingtux.kingserverinfo.events.ClickEvent;
+import me.kingtux.kingserverinfo.events.JoinEvent;
+import me.kingtux.kingserverinfo.events.LeaveEvent;
 import me.kingtux.kingserverinfo.utils.MediaGui.MediaGui;
 import me.kingtux.kingserverinfo.utils.config.ConfigManager;
 import me.kingtux.kingserverinfo.utils.config.ConfigSettings;
@@ -42,7 +44,8 @@ public class KingServerInfoMain extends JavaPlugin {
         }
 
         mediaGui = new MediaGui(this);
-        Bukkit.getServer().getPluginManager().registerEvents(new ClickEvent(this), this);
+        enableEvents();
+
     }
 
     public void onDisable() {
@@ -55,6 +58,13 @@ public class KingServerInfoMain extends JavaPlugin {
 
     public void setConfigSettings(ConfigSettings cF) {
         this.configSettings = cF;
+    }
+
+    public void enableEvents() {
+        Bukkit.getServer().getPluginManager().registerEvents(new ClickEvent(this), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new LeaveEvent(this), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new JoinEvent(this), this);
+
     }
 
 

@@ -11,10 +11,11 @@ public class JsonManager {
 
     public static TextComponent MakeHoverableMessage(String Player, String HoverText) {
 
+
         if (Bukkit.getServer().getPlayer(Player) == null) {
-            Player = "&4" + Player;
+            Player = " &4" + Player;
         } else {
-            Player = "&2" + Player;
+            Player = " &2" + Player;
         }
 
         Player = ChatColor.translateAlternateColorCodes('&', Player);
@@ -24,6 +25,7 @@ public class JsonManager {
 
         return message;
     }
+
 
     public static TextComponent MakeLinkText(String Link) {
         ComponentBuilder build = new ComponentBuilder("Click here to go to " + Link);

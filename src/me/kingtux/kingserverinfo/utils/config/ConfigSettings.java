@@ -3,8 +3,6 @@ package me.kingtux.kingserverinfo.utils.config;
 import me.kingtux.kingserverinfo.utils.JsonManager;
 import me.kingtux.kingserverinfo.utils.MediaGui.Items;
 import net.md_5.bungee.api.chat.TextComponent;
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +10,10 @@ import java.util.List;
 public class ConfigSettings {
     private ConfigManager configManager;
     private int mediaSize;
-    private String prefix, serverInfoCommand, serverInfoDescription, ownerInfo, guiTitle;
+    private String prefix, serverInfoCommand, serverInfoDescription, ownerInfo, guiTitle, owner;
     private List<String> baseCommandDataInfo, rules, onJoinBroudcastMessage, onJoinPersonalMessage, onLeaveMessage;
     private ArrayList<TextComponent> staffList;
     private ArrayList<Items> guiItems;
-    private Player owner;
 
     public ConfigSettings(ConfigManager configManager) {
         this.configManager = configManager;
@@ -34,7 +31,7 @@ public class ConfigSettings {
         onJoinBroudcastMessage = configManager.getMainConfig().getStringList("OnJoin-Event.Broudcast-Message");
         onJoinPersonalMessage = configManager.getMainConfig().getStringList("OnJoin-Event.Personal-Message");
         onLeaveMessage = configManager.getMainConfig().getStringList("OnLeave-Event.Broudcast-Message");
-        owner = Bukkit.getServer().getPlayer(configManager.getMainConfig().getString("Staff.Owner.Owner-Name"));
+        owner = configManager.getMainConfig().getString("Staff.Owner.Owner-Name");
         ownerInfo = configManager.getMainConfig().getString("Staff.Owner.Owner-Info");
         mediaSize = configManager.getMainConfig().getInt("Media.Size");
         guiTitle = configManager.getMainConfig().getString("Media.Title");
@@ -56,6 +53,7 @@ public class ConfigSettings {
                     configManager.getMainConfig().getString(Position + ".Link"),
                     configManager.getMainConfig().getBoolean(Position + ".Icon.Clickable"),
                     configManager.getMainConfig().getStringList(Position + ".Icon.Sub-Text"));
+            System.out.println(NewItem.toString());
             guiItems.add(NewItem);
         }
     }
@@ -108,7 +106,7 @@ public class ConfigSettings {
         return onLeaveMessage;
     }
 
-    public Player getOwner() {
+    public String getOwner() {
         return owner;
     }
 
@@ -124,4 +122,7 @@ public class ConfigSettings {
         return guiItems;
     }
 
+    public String getOwnerInfo() {
+        return ownerInfo;
+    }
 }

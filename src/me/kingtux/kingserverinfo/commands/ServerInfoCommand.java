@@ -1,6 +1,8 @@
 package me.kingtux.kingserverinfo.commands;
 
 import me.kingtux.kingserverinfo.KingServerInfoMain;
+import me.kingtux.kingserverinfo.utils.JsonManager;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
@@ -38,18 +40,58 @@ public class ServerInfoCommand extends BukkitCommand {
                         player.sendMessage(Message);
                     }
                 } else {
-                    player.sendMessage(translateAlternateColorCodes('&', "&4You do not have permission forthis command."));
+                    player.sendMessage(translateAlternateColorCodes('&', "&4You do not have permission for this command."));
                 }
 
             } else {
                 if (args[0].equalsIgnoreCase("reload")) {
                     if (player.hasPermission("kingserverinfo.command.reload")) {
                         plugin.getConfigSettings().getAllSettings();
+                        player.sendMessage(translateAlternateColorCodes('&', plugin.getConfigSettings().getPrefix() + " Config Reloaded"));
                     } else {
-                        player.sendMessage(translateAlternateColorCodes('&', "You do not have permission to fun this command"));
+                        player.sendMessage(translateAlternateColorCodes('&', "You do not have permission to run this command"));
                     }
                 } else if (args[0].equalsIgnoreCase("media")) {
-                    player.openInventory(plugin.getMediaGui().createMediaGui());
+                    if (player.hasPermission(BasePerm + ".media")) {
+                        player.openInventory(plugin.getMediaGui().createMediaGui());
+                    } else {
+                        player.sendMessage(translateAlternateColorCodes('&', "&4You do not have permission for this command."));
+
+                    }
+                } else if (args[0].equalsIgnoreCase("rules")) {
+                    if (player.hasPermission(BasePerm + ".rules")) {
+                        for (String rulesLine : plugin.getConfigSettings().getRules()) {
+                            player.sendMessage(translateAlternateColorCodes('&', rulesLine));
+                        }
+                    } else {
+                        player.sendMessage(translateAlternateColorCodes('&', "&4You do not have permission for this command."));
+                    }
+                } else if (args[0].equalsIgnoreCase("owner")) {
+                    player.sendMessage(translateAlternateColorCodes('&', "&2Our Owner is "));
+                    player.spigot().sendMessage(JsonManager.MakeHoverableMessage(
+                            plugin.getConfigSettings().getOwner(),
+                            plugin.getConfigSettings().getOwnerInfo()));
+                } else if (args[0].equalsIgnoreCase("staff")) {
+                    player.sendMessage(translateAlternateColorCodes('&', "&2If the name is green the player is online!"));
+                    for (TextComponent textComponent : plugin.getConfigSettings().getStaffList()) {
+
+                        player.spigot().sendMessage(textComponent);
+
+                    }
+                } else if (args[0].equalsIgnoreCase("help")) {
+                    player.sendMessage(translateAlternateColorCodes('&',
+                            "&2The Base Command is equal to /" + plugin.getConfigSettings().getServerInfoCommand() + ".\n" +
+                                    "&2 All the subs commands will be listed below." +
+                                    "\n &2 staff which list all the staff" +
+                                    "\n &2 owner which will list the owner" +
+                                    "\n &2 media which will open the media gui" +
+                                    "\n &2 rules which will list the rules" +
+                                    "\n &2 Just the Basecommand will list the general server info."
+                    ));
+
+                } else {
+                    player.sendMessage(translateAlternateColorCodes('&', "&4Invalid argument"));
+
                 }
 
             }
@@ -64,7 +106,6 @@ public class ServerInfoCommand extends BukkitCommand {
                 sender.sendMessage("You must be a player to run this command");
             }
         }
-        System.out.println("Command Finished");
         return false;
     }
 }

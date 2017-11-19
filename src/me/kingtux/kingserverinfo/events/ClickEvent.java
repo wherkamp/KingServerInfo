@@ -16,19 +16,19 @@ public class ClickEvent implements Listener {
 
     @EventHandler
     public void ClickEvent(InventoryClickEvent e) {
-        System.out.println("Click Happend");
-
         if (e.getClickedInventory().equals(plugin.getMediaGui().getMediaGui())) {
-            System.out.println("Click Gui FOund");
-
             for (Items item : plugin.getMediaGui().getguiItems().keySet()) {
-                System.out.println("Click Items");
-
                 if (e.getCurrentItem().equals(plugin.getMediaGui().getguiItems().get(item))) {
-                    e.getWhoClicked().spigot().sendMessage(item.getLink());
-                    System.out.println("Click Found");
-                    e.setCancelled(true);
-                    break;
+                    if (item.getClickable() == true) {
+                        e.getWhoClicked().spigot().sendMessage(item.getLink());
+                        e.getWhoClicked().closeInventory();
+                        e.setCancelled(true);
+                        break;
+                    } else {
+                        e.setCancelled(true);
+                        break;
+                    }
+
                 }
             }
 
