@@ -1,7 +1,35 @@
 #KingServerInfo by KingTux
-#Website
+#Website wherkamp.github.io
 prefix: [ServerInfo]
 
 BaseCommand: serverinfo
 
-BaseCommand-description: "Run this for info"
+BaseCommand-description: 'Run this for info'
+
+BaseCommand-data-info:
+   - 'Welcome to our server!'
+   - 'I hope you love your stay'
+Rules:
+   - 'Do not say cow'
+   - 'Do not say two chickens'
+
+OnJoin-Event:
+   Broudcast-Message:
+      - 'Welcome {player to the server}'
+   Personal-Message:
+      - 'Stay awhile and listen'
+OnLeave-Event:
+   Broudcast-Message:
+      - 'Say Good Bye to {player}'
+#If the Staff is Online his name will be green. If he is online his name will be red.
+#Also when you hover over the name it will give the Staff-Info of the Staff
+Staff:
+   Owner:
+      Owner-Name: KingTux
+      Owner-Info: 'Our Leader KingTux is the greatest person ever'
+   Staff-Members:
+      Little_Wes:
+         Staff-Info: 'He is our Leaders greatest assistant'
+      FedoraCraft:
+         Staff-Info: 'He is useless'
+
