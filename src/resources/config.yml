@@ -1,0 +1,7 @@
+#KingServerInfo by KingTux
+#Website
+prefix: [ServerInfo]
+
+BaseCommand: serverinfo
+
+BaseCommand-description: "Run this for info"
