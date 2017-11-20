@@ -1,5 +1,6 @@
 package me.kingtux.kingserverinfo.commands;
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import me.kingtux.kingserverinfo.KingServerInfoMain;
 import me.kingtux.kingserverinfo.utils.JsonManager;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -36,7 +37,7 @@ public class ServerInfoCommand extends BukkitCommand {
                 if (player.hasPermission(BasePerm + "serverinfo")) {
                     for (String Message : plugin.getConfigSettings().getBaseCommandDataInfo()) {
                         Message = translateAlternateColorCodes('&', Message);
-                        Message = Message.replace("{player}", player.getName());
+                        Message = PlaceholderAPI.setPlaceholders(player, Message);
                         player.sendMessage(Message);
                     }
                 } else {
@@ -61,6 +62,8 @@ public class ServerInfoCommand extends BukkitCommand {
                 } else if (args[0].equalsIgnoreCase("rules")) {
                     if (player.hasPermission(BasePerm + ".rules")) {
                         for (String rulesLine : plugin.getConfigSettings().getRules()) {
+                            rulesLine = PlaceholderAPI.setPlaceholders(player, rulesLine);
+
                             player.sendMessage(translateAlternateColorCodes('&', rulesLine));
                         }
                     } else {
@@ -79,15 +82,19 @@ public class ServerInfoCommand extends BukkitCommand {
 
                     }
                 } else if (args[0].equalsIgnoreCase("help")) {
-                    player.sendMessage(translateAlternateColorCodes('&',
-                            "&2The Base Command is equal to /" + plugin.getConfigSettings().getServerInfoCommand() + ".\n" +
-                                    "&2 All the subs commands will be listed below." +
-                                    "\n &2 staff which list all the staff" +
-                                    "\n &2 owner which will list the owner" +
-                                    "\n &2 media which will open the media gui" +
-                                    "\n &2 rules which will list the rules" +
-                                    "\n &2 Just the Basecommand will list the general server info."
-                    ));
+
+                    String argumentHelp = "&2The Base Command is equal to /" + plugin.getConfigSettings().getServerInfoCommand() + ".\n" +
+                            "&2 All the subs commands will be listed below." +
+                            "\n &2 staff which list all the staff" +
+                            "\n &2 owner which will list the owner" +
+                            "\n &2 media which will open the media gui" +
+                            "\n &2 rules which will list the rules" +
+                            "\n &2 Just the Basecommand will list the general server info, \n";
+                    for (Arguments arguments : plugin.getConfigSettings().getCustomArguments()) {
+                        argumentHelp = argumentHelp + arguments.getArugment() + arguments.getDescription() + ", \n &2";
+                    }
+                    player.sendMessage(translateAlternateColorCodes('&', argumentHelp));
+
 
                 } else {
                     player.sendMessage(translateAlternateColorCodes('&', "&4Invalid argument"));

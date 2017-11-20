@@ -15,12 +15,12 @@ Rules:
 
 OnJoin-Event:
    Broudcast-Message:
-      - 'Welcome {player} to the server'
+      - 'Welcome %player% to the server'
    Personal-Message:
       - 'Stay awhile and listen'
 OnLeave-Event:
    Broudcast-Message:
-      - 'Say Good Bye to {player}'
+      - 'Say Good Bye to %player%'
 #If the Staff is Online his name will be green. If he is online his name will be red.
 #Also when you hover over the name it will give the Staff-Info of the Staff
 Staff:
@@ -38,16 +38,29 @@ Media:
    Title: 'Media gui for KingServerInfo'
    Items:
       Website:
-         Link: http://wherkamp.github.io
+         Link:
+            #If Clickable is equal to false you don't need a Link..
+            Clickable: true
+            Link: www.wherkamp.github.io
          Icon:
             Item: PAPER
-            Clickable: true
+            Position: 1
+            Item-Name: Website
+            Sub-Text:
+               - 'Click Here to go to our Website'
+      Placehodler1:
+         Link:
+            #If Clickable is equal to false you don't need a Link..
+            Clickable: false
+         Icon:
+            Item: GLASS_PANE
+              Color:BLUE
             Position: 1
             Item-Name: Website
             Sub-Text:
                - 'Click Here to go to our Website'
 
+
 #Avaible Place Holders
-#PlaceHolders:
-#   - {player}
+#PlaceHolderAPI baby
 

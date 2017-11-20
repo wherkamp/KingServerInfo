@@ -24,6 +24,8 @@ public class ClickEvent implements Listener {
                         e.getWhoClicked().closeInventory();
                         e.setCancelled(true);
                         break;
+
+
                     } else {
                         e.setCancelled(true);
                         break;

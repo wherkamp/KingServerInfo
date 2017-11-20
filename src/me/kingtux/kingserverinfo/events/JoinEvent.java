@@ -1,5 +1,6 @@
 package me.kingtux.kingserverinfo.events;
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import me.kingtux.kingserverinfo.KingServerInfoMain;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -22,13 +23,13 @@ public class JoinEvent implements Listener {
         Player player = e.getPlayer();
         List<String> onJoinBroudcastMessage = plugin.getConfigSettings().getOnJoinBroudcastMessage();
         for (String s : onJoinBroudcastMessage) {
-            s = s.replace("{player}", player.getName());
+            s = PlaceholderAPI.setPlaceholders(player, s);
             Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&',
                     plugin.getConfigSettings().getPrefix() + " " + s));
         }
         List<String> onJoinPersonalMessage = plugin.getConfigSettings().getOnJoinPersonalMessage();
         for (String s : onJoinPersonalMessage) {
-            s = s.replace("{player}", player.getName());
+            s = PlaceholderAPI.setPlaceholders(player, s);
             player.sendMessage(ChatColor.translateAlternateColorCodes('&',
                     plugin.getConfigSettings().getPrefix() + " " + s));
         }

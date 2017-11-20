@@ -1,11 +1,15 @@
 package me.kingtux.kingserverinfo.utils.config;
 
+import me.kingtux.kingserverinfo.commands.Arguments;
 import me.kingtux.kingserverinfo.utils.JsonManager;
 import me.kingtux.kingserverinfo.utils.MediaGui.Items;
 import net.md_5.bungee.api.chat.TextComponent;
+import org.bukkit.Bukkit;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+
 
 public class ConfigSettings {
     private ConfigManager configManager;
@@ -15,11 +19,16 @@ public class ConfigSettings {
     private ArrayList<TextComponent> staffList;
     private ArrayList<Items> guiItems;
 
+    private ArrayList<Arguments> customArguments;
+
+    public ArrayList<Arguments> getCustomArguments() {
+        return customArguments;
+    }
+
     public ConfigSettings(ConfigManager configManager) {
         this.configManager = configManager;
         getAllSettings();
     }
-
 
     public void getAllSettings() {
 
@@ -39,6 +48,30 @@ public class ConfigSettings {
 
         getMediaGuifromConfig();
         getStaffFromConfig();
+        getNewArgumentsFromConfig();
+    }
+
+    private void getNewArgumentsFromConfig() {
+        for (String stringArguments : configManager.getArgumentsConfig().getConfigurationSection("Arguments").getKeys(false)) {
+
+            String basePathToArguments = "Arguments." + stringArguments;
+            if (checkArgumentConfig(basePathToArguments) == true) {
+                Arguments argument;
+                //Checking if it has Alias
+                if (configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Alias") == null) {
+                    argument = new Arguments(configManager.getArgumentsConfig().getString(basePathToArguments),
+                            configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Message"),
+                            configManager.getArgumentsConfig().getString(basePathToArguments + ".Description"));
+                } else {
+                    argument = new Arguments(configManager.getArgumentsConfig().getString(basePathToArguments),
+                            configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Message"),
+                            configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Alias"),
+                            configManager.getArgumentsConfig().getString(basePathToArguments + ".Description"));
+                }
+
+                customArguments.add(argument);
+            }
+        }
     }
 
     private void getMediaGuifromConfig() {
@@ -69,6 +102,19 @@ public class ConfigSettings {
 
     }
 
+    private Boolean checkArgumentConfig(String basePathToArguments) {
+        if (configManager.getArgumentsConfig().getString(basePathToArguments) == null) {
+            Bukkit.getLogger().log(Level.SEVERE, "All Arguments must have a Description");
+            return false;
+        } else if (configManager.getArgumentsConfig().getString(basePathToArguments + ".Description") == null) {
+            Bukkit.getLogger().log(Level.SEVERE, "All Arguments must have a Description");
+            return false;
+        } else if (configManager.getArgumentsConfig().getStringList(basePathToArguments + "Message") == null) {
+            Bukkit.getLogger().log(Level.SEVERE, "All Arguments must have a Description");
+            return false;
+        }
+        return true;
+    }
 
     public String getPrefix() {
         return prefix;

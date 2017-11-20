@@ -24,29 +24,45 @@ public class KingServerInfoMain extends JavaPlugin {
     private MediaGui mediaGui;
 
     public void onEnable() {
-        configManager = new ConfigManager(this);
-        configManager.setupConfig();
+        if (Bukkit.getServer().getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+            configManager = new ConfigManager(this);
+            configManager.setupConfig();
 
-        Bukkit.getLogger().log(Level.INFO,
-                ChatColor.translateAlternateColorCodes('&',
-                        configSettings.getPrefix() + " Successfully Got the Config and Settings"));
-        try {
-            final Field bukkitCommandMap = Bukkit.getServer().getClass().getDeclaredField("commandMap");
+            Bukkit.getLogger().log(Level.INFO,
+                    ChatColor.translateAlternateColorCodes('&',
+                            configSettings.getPrefix() + " Successfully Got the Config and Settings"));
+            try {
+                final Field bukkitCommandMap = Bukkit.getServer().getClass().getDeclaredField("commandMap");
 
-            bukkitCommandMap.setAccessible(true);
-            CommandMap commandMap = (CommandMap) bukkitCommandMap.get(Bukkit.getServer());
+                bukkitCommandMap.setAccessible(true);
+                CommandMap commandMap = (CommandMap) bukkitCommandMap.get(Bukkit.getServer());
 
-            commandMap.register(configSettings.getServerInfoCommand(), new ServerInfoCommand(configSettings.getServerInfoCommand(), configSettings.getServerInfoDescription(), this));
+                commandMap.register(configSettings.getServerInfoCommand(), new ServerInfoCommand(configSettings.getServerInfoCommand(), configSettings.getServerInfoDescription(), this));
 
 
-        } catch (Exception e) {
-            e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            //ItemStack itemStack = new ItemStack(Material.getMaterial(""), 1);
+            //if (itemStack instanceof Colorable) {
+            //    if (configManager.getMainConfig().getString("Item.Path") != null) {
+            //       Colorable cl = ((Colorable) itemStack.getData());
+            //       cl.setColor(DyeColor.valueOf(""));
+            //  }
+            //}
+            enableEvents();
+            mediaGui = new MediaGui(this);
+
+
+        } else {
+            throw new RuntimeException("I find your lack of the PlaceHolderAPI disturbing.");
         }
 
-        mediaGui = new MediaGui(this);
-        enableEvents();
 
     }
+
+
+
 
     public void onDisable() {
 
