@@ -85,13 +85,14 @@ public class ServerInfoCommand extends BukkitCommand {
 
                     String argumentHelp = "&2The Base Command is equal to /" + plugin.getConfigSettings().getServerInfoCommand() + ".\n" +
                             "&2 All the subs commands will be listed below." +
-                            "\n &2 staff which list all the staff" +
-                            "\n &2 owner which will list the owner" +
-                            "\n &2 media which will open the media gui" +
-                            "\n &2 rules which will list the rules" +
-                            "\n &2 Just the Basecommand will list the general server info, \n";
+                            "\n &2 staff: &Awhich list all the staff" +
+                            "\n &2 owner: &Awhich will list the owner" +
+                            "\n &2 media: &Awhich will open the media gui" +
+                            "\n &2 rules: &Awhich will list the rules" +
+                            "\n &2 Just the Basecommand will list the general server info,\n";
+
                     for (Arguments arguments : plugin.getConfigSettings().getCustomArguments()) {
-                        argumentHelp = argumentHelp + " " + arguments.getArgument() + arguments.getDescription() + ", \n &2";
+                        argumentHelp = argumentHelp + arguments.getArgument() + ": &A" + arguments.getDescription() + ", \n &2";
                     }
                     player.sendMessage(translateAlternateColorCodes('&', argumentHelp));
 

@@ -15,12 +15,12 @@ Rules:
 
 OnJoin-Event:
    Broudcast-Message:
-      - 'Welcome %player% to the server'
+      - 'Welcome %player_displayname% to the server'
    Personal-Message:
       - 'Stay awhile and listen'
 OnLeave-Event:
    Broudcast-Message:
-      - 'Say Good Bye to %player%'
+      - 'Say Good Bye to %player_displayname%'
 #If the Staff is Online his name will be green. If he is online his name will be red.
 #Also when you hover over the name it will give the Staff-Info of the Staff
 Staff:
