@@ -5,4 +5,4 @@ Commands will be able to be customized!**
 
 Development is _15%_ done! If you are happy tell me anything you would like to see!
 
-If you need any help with setting help the plugin go to [Here](wherkamp.github.io/KingServerInfo/help)
+If you need any help with setting help the plugin go to [Here](help)
