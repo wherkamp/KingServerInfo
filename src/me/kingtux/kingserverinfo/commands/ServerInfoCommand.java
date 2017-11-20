@@ -2,6 +2,7 @@ package me.kingtux.kingserverinfo.commands;
 
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.kingtux.kingserverinfo.KingServerInfoMain;
+import me.kingtux.kingserverinfo.utils.CustomArgumentUtils;
 import me.kingtux.kingserverinfo.utils.JsonManager;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.command.CommandSender;
@@ -102,21 +103,15 @@ public class ServerInfoCommand extends BukkitCommand {
 
                     for (Arguments arguments : plugin.getConfigSettings().getCustomArguments()) {
                         if (args[0].equalsIgnoreCase(arguments.getArgument())) {
-                            for (String m : arguments.getMessage()) {
-                                InvalidArgument = false;
-                                m = PlaceholderAPI.setPlaceholders(player, m);
-                                player.sendMessage(translateAlternateColorCodes('&', m));
-                            }
+                            InvalidArgument = false;
+                            CustomArgumentUtils.doArgumentWork(arguments, player);
                             break;
                         } else if (arguments.getAlias() != null) {
                             if (InvalidArgument == true) {
                                 for (String argumentAlias : arguments.getAlias()) {
                                     if (args[0].equalsIgnoreCase(argumentAlias)) {
-                                        for (String m : arguments.getMessage()) {
-                                            InvalidArgument = false;
-                                            m = PlaceholderAPI.setPlaceholders(player, m);
-                                            player.sendMessage(translateAlternateColorCodes('&', m));
-                                        }
+                                        InvalidArgument = false;
+                                        CustomArgumentUtils.doArgumentWork(arguments, player);
                                         break;
                                     }
                                 }

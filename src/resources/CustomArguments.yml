@@ -7,7 +7,13 @@ Arguments:
    QA:
       Alias:
          - qanda
-      Message:
+      Player-Message:
          - 'No we do not sell pandas, %player%'
+      Broudcast-Message:
+         - '%player_displayname% wondered if we sold pandas'
+      Console-Commands:
+         - 'error %player_displayname%'
+      Player-Commands:
+         - 'error %player_displayname%'
       Description: 'This will answers some basic questions.'
 
