@@ -20,18 +20,19 @@ public class JoinEvent implements Listener {
 
     @EventHandler
     public void playerJoinEvent(PlayerJoinEvent e) {
+        PlaceholderAPI api = new PlaceholderAPI();
         Player player = e.getPlayer();
         List<String> onJoinBroudcastMessage = plugin.getConfigSettings().getOnJoinBroudcastMessage();
         for (String s : onJoinBroudcastMessage) {
-            s = PlaceholderAPI.setPlaceholders(player, s);
+            String PlaceHolderMessage = PlaceholderAPI.setPlaceholders(player, s);
             Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&',
-                    plugin.getConfigSettings().getPrefix() + " " + s));
+                    plugin.getConfigSettings().getPrefix() + " " + PlaceHolderMessage));
         }
         List<String> onJoinPersonalMessage = plugin.getConfigSettings().getOnJoinPersonalMessage();
         for (String s : onJoinPersonalMessage) {
-            s = PlaceholderAPI.setPlaceholders(player, s);
+            String PlaceHolderMessage = PlaceholderAPI.setPlaceholders(player, s).toString();
             player.sendMessage(ChatColor.translateAlternateColorCodes('&',
-                    plugin.getConfigSettings().getPrefix() + " " + s));
+                    plugin.getConfigSettings().getPrefix() + " " + PlaceHolderMessage));
         }
     }
 }

@@ -91,14 +91,42 @@ public class ServerInfoCommand extends BukkitCommand {
                             "\n &2 rules which will list the rules" +
                             "\n &2 Just the Basecommand will list the general server info, \n";
                     for (Arguments arguments : plugin.getConfigSettings().getCustomArguments()) {
-                        argumentHelp = argumentHelp + arguments.getArugment() + arguments.getDescription() + ", \n &2";
+                        argumentHelp = argumentHelp + " " + arguments.getArgument() + arguments.getDescription() + ", \n &2";
                     }
                     player.sendMessage(translateAlternateColorCodes('&', argumentHelp));
 
 
                 } else {
-                    player.sendMessage(translateAlternateColorCodes('&', "&4Invalid argument"));
+                    Boolean InvalidArgument = true;
 
+                    for (Arguments arguments : plugin.getConfigSettings().getCustomArguments()) {
+                        if (args[0].equalsIgnoreCase(arguments.getArgument())) {
+                            for (String m : arguments.getMessage()) {
+                                InvalidArgument = false;
+                                m = PlaceholderAPI.setPlaceholders(player, m);
+                                player.sendMessage(translateAlternateColorCodes('&', m));
+                            }
+                            break;
+                        } else if (arguments.getAlias() != null) {
+                            if (InvalidArgument == true) {
+                                for (String argumentAlias : arguments.getAlias()) {
+                                    if (args[0].equalsIgnoreCase(argumentAlias)) {
+                                        for (String m : arguments.getMessage()) {
+                                            InvalidArgument = false;
+                                            m = PlaceholderAPI.setPlaceholders(player, m);
+                                            player.sendMessage(translateAlternateColorCodes('&', m));
+                                        }
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (InvalidArgument == true) {
+                        player.sendMessage(translateAlternateColorCodes('&', "&4Invalid argument"));
+
+                    } else {
+                    }
                 }
 
             }

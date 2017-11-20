@@ -52,6 +52,7 @@ public class ConfigSettings {
     }
 
     private void getNewArgumentsFromConfig() {
+        customArguments = new ArrayList<Arguments>();
         for (String stringArguments : configManager.getArgumentsConfig().getConfigurationSection("Arguments").getKeys(false)) {
 
             String basePathToArguments = "Arguments." + stringArguments;
@@ -59,11 +60,11 @@ public class ConfigSettings {
                 Arguments argument;
                 //Checking if it has Alias
                 if (configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Alias") == null) {
-                    argument = new Arguments(configManager.getArgumentsConfig().getString(basePathToArguments),
+                    argument = new Arguments(stringArguments,
                             configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Message"),
                             configManager.getArgumentsConfig().getString(basePathToArguments + ".Description"));
                 } else {
-                    argument = new Arguments(configManager.getArgumentsConfig().getString(basePathToArguments),
+                    argument = new Arguments(stringArguments,
                             configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Message"),
                             configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Alias"),
                             configManager.getArgumentsConfig().getString(basePathToArguments + ".Description"));

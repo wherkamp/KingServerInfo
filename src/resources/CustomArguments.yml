@@ -2,8 +2,9 @@
 #Permissions will be kingserverinfo.command.{argument}
 #PlaceholderAPI placeholders are allowed
 #You cannot overwrite a hardcoded Argument Such as <command> staff
+
 Arguments:
-   qa:
+   QA:
       Alias:
          - qanda
       Message:
