@@ -54,7 +54,7 @@
         <defaultGoal>clean install</defaultGoal>
         <resources>
             <resource>
-                <directory>src/resource</directory>
+                <directory>src/resources</directory>
                 <filtering>true</filtering>
                 <includes>
                     <include>plugin.yml</include>

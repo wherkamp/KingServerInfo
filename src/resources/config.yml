@@ -43,24 +43,22 @@ Media:
             Clickable: true
             Link: www.wherkamp.github.io
          Icon:
-            Item: PAPER
+            Item:
+               Item-Type: PAPER
             Position: 1
             Item-Name: Website
             Sub-Text:
                - 'Click Here to go to our Website'
       Placehodler1:
          Link:
-            #If Clickable is equal to false you don't need a Link..
             Clickable: false
          Icon:
-            Item: GLASS_PANE
-              Color:BLUE
-            Position: 1
+            Item:
+               Item-Type: WOOL
+            Position: 4
             Item-Name: Website
             Sub-Text:
                - 'Click Here to go to our Website'
 
-
-#Avaible Place Holders
-#PlaceHolderAPI baby
-
+# Color will be ignored ifcolorable is not allowed
+#Avaible Place Holder

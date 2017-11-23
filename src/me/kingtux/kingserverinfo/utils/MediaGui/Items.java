@@ -8,11 +8,12 @@ import java.util.List;
 public class Items {
     private int position;
     private TextComponent link;
-    private String name, itemName, itemType;
+    private String name, itemName, itemType, color;
     private Boolean clickable;
     private List<String> subText;
 
-    public Items(int position, String name, String itemName, String itemType, String link, Boolean clickable, List<String> subText) {
+
+    public Items(int position, String name, String itemName, String itemType, String link, Boolean clickable, List<String> subText, String color) {
         this.position = position;
         this.name = name;
         this.itemName = itemName;
@@ -20,8 +21,13 @@ public class Items {
         this.link = JsonManager.MakeLinkText(link);
         this.clickable = clickable;
         this.subText = subText;
-
+        if (color != null) {
+            this.color = color.toUpperCase();
+        } else {
+            this.color = null;
+        }
     }
+
 
     public int getPosition() {
         return position;
@@ -61,6 +67,11 @@ public class Items {
                 ", itemType='" + itemType + '\'' +
                 ", clickable=" + clickable +
                 ", subText=" + subText +
+                ", color=" + color +
                 '}';
+    }
+
+    public String getColor() {
+        return color;
     }
 }

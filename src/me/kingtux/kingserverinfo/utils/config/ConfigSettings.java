@@ -58,18 +58,16 @@ public class ConfigSettings {
             String basePathToArguments = "Arguments." + stringArguments;
             if (checkArgumentConfig(basePathToArguments) == true) {
                 Arguments argument;
-                //Checking if it has Alias
-                if (configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Alias") == null) {
-                    argument = new Arguments(stringArguments,
-                            configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Message"),
-                            configManager.getArgumentsConfig().getString(basePathToArguments + ".Description"));
-                } else {
-                    argument = new Arguments(stringArguments,
-                            configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Message"),
-                            configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Alias"),
-                            configManager.getArgumentsConfig().getString(basePathToArguments + ".Description"));
-                }
-
+                String argumentArg = stringArguments;
+                List<String> argumentAlias = configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Alias");
+                List<String> argumentPlayerMessage = configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Player-Message");
+                List<String> argumentPlayerCommand = configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Player-Commands");
+                List<String> argumentConsoleCommand = configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Console-Commands");
+                List<String> argumentBroudCastMessage = configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Broudcast-Message");
+                String argumentDescription = configManager.getArgumentsConfig().getString(basePathToArguments + ".Description");
+                argument = new Arguments(argumentArg, argumentDescription, argumentAlias,
+                        argumentPlayerMessage, argumentBroudCastMessage,
+                        argumentPlayerCommand, argumentConsoleCommand);
                 customArguments.add(argument);
             }
         }
@@ -83,11 +81,12 @@ public class ConfigSettings {
             Items NewItem = new Items(configManager.getMainConfig().getInt(Position + ".Icon.Position"),
                     configManager.getMainConfig().getString(Position + ".Icon.Name"),
                     configManager.getMainConfig().getString(Position + ".Icon.Item-Name"),
-                    configManager.getMainConfig().getString(Position + ".Icon.Item"),
+                    configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type"),
                     configManager.getMainConfig().getString(Position + ".Link"),
                     configManager.getMainConfig().getBoolean(Position + ".Icon.Clickable"),
-                    configManager.getMainConfig().getStringList(Position + ".Icon.Sub-Text"));
-            System.out.println(NewItem.toString());
+                    configManager.getMainConfig().getStringList(Position + ".Icon.Sub-Text"),
+                    configManager.getMainConfig().getString(Position + ".Icon.Item.Color"));
+            System.out.println(NewItem.toString() + "\n" + configManager.getMainConfig().getString(Position + ".Icon.Item.Color"));
             guiItems.add(NewItem);
         }
     }
@@ -108,9 +107,6 @@ public class ConfigSettings {
             Bukkit.getLogger().log(Level.SEVERE, "All Arguments must have a Description");
             return false;
         } else if (configManager.getArgumentsConfig().getString(basePathToArguments + ".Description") == null) {
-            Bukkit.getLogger().log(Level.SEVERE, "All Arguments must have a Description");
-            return false;
-        } else if (configManager.getArgumentsConfig().getStringList(basePathToArguments + "Message") == null) {
             Bukkit.getLogger().log(Level.SEVERE, "All Arguments must have a Description");
             return false;
         }

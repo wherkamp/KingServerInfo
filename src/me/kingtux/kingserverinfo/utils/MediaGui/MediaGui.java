@@ -23,13 +23,15 @@ public class MediaGui {
         mediaGui = Bukkit.createInventory(null, plugin.getConfigSettings().getMediaSize(), plugin.getConfigSettings().getGuiTitle());
         ArrayList<Items> allItems = plugin.getConfigSettings().getGuiItems();
         for (Items items : allItems) {
-            ItemStack itemStack = new ItemStack(Material.getMaterial(items.getItemType()));
+            ItemStack itemStack;
+            itemStack = new ItemStack(Material.getMaterial(items.getItemType()));
             ItemMeta itemsmeta = itemStack.getItemMeta();
             itemsmeta.setLore(items.getSubText());
             itemsmeta.setDisplayName(items.getItemName());
             itemStack.setItemMeta(itemsmeta);
-            guiItems.put(items, itemStack);
             mediaGui.setItem(items.getPosition(), itemStack);
+            guiItems.put(items, itemStack);
+
         }
         return mediaGui;
     }
