@@ -7,10 +7,14 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public class CustomArgumentUtils {
-    public static void doArgumentWork(Arguments arguments, Player player) {
+    static String prefix;
+
+    public static void doArgumentWork(Arguments arguments, Player player, String prefix2) {
+        prefix = prefix2;
         //Player Message
         if (arguments.getPlayerMessage() != null) {
             for (String m : arguments.getPlayerMessage()) {
+
                 sendPlayerMessage(player, m);
             }
         }
@@ -37,11 +41,13 @@ public class CustomArgumentUtils {
     }
 
     public static void sendPlayerMessage(Player p, String Message) {
+        Message = Message.replace("{prefix}", prefix);
         Message = PlaceholderAPI.setPlaceholders(p, Message);
         p.sendMessage(ChatColor.translateAlternateColorCodes('&', Message));
     }
 
     public static void sendBroudcastMessage(Player p, String Message) {
+        Message = Message.replace("{prefix}", prefix);
         Message = PlaceholderAPI.setPlaceholders(p, Message);
         Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&', Message));
 

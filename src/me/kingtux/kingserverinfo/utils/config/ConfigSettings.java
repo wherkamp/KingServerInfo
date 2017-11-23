@@ -86,7 +86,6 @@ public class ConfigSettings {
                     configManager.getMainConfig().getBoolean(Position + ".Icon.Clickable"),
                     configManager.getMainConfig().getStringList(Position + ".Icon.Sub-Text"),
                     configManager.getMainConfig().getString(Position + ".Icon.Item.Color"));
-            System.out.println(NewItem.toString() + "\n" + configManager.getMainConfig().getString(Position + ".Icon.Item.Color"));
             guiItems.add(NewItem);
         }
     }
@@ -168,4 +167,6 @@ public class ConfigSettings {
     public String getOwnerInfo() {
         return ownerInfo;
     }
+
+
 }

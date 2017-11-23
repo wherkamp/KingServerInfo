@@ -63,4 +63,14 @@ public class ConfigManager {
     }
 
 
+    public void reloadConfig() {
+        try {
+            argumentsConfig.load(argumentsFile);
+            getMainConfig().load(mainConfig);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InvalidConfigurationException e) {
+            e.printStackTrace();
+        }
+    }
 }

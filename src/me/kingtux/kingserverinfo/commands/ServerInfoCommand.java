@@ -37,8 +37,10 @@ public class ServerInfoCommand extends BukkitCommand {
             if (args.length == 0) {
                 if (player.hasPermission(BasePerm + "serverinfo")) {
                     for (String Message : plugin.getConfigSettings().getBaseCommandDataInfo()) {
+                        Message = Message.replace("{prefix}", plugin.getConfigSettings().getPrefix());
                         Message = translateAlternateColorCodes('&', Message);
                         Message = PlaceholderAPI.setPlaceholders(player, Message);
+
                         player.sendMessage(Message);
                     }
                 } else {
@@ -48,7 +50,7 @@ public class ServerInfoCommand extends BukkitCommand {
             } else {
                 if (args[0].equalsIgnoreCase("reload")) {
                     if (player.hasPermission("kingserverinfo.command.reload")) {
-                        plugin.getConfigSettings().getAllSettings();
+                        plugin.reloadPlugin();
                         player.sendMessage(translateAlternateColorCodes('&', plugin.getConfigSettings().getPrefix() + " Config Reloaded"));
                     } else {
                         player.sendMessage(translateAlternateColorCodes('&', "You do not have permission to run this command"));
@@ -63,6 +65,7 @@ public class ServerInfoCommand extends BukkitCommand {
                 } else if (args[0].equalsIgnoreCase("rules")) {
                     if (player.hasPermission(BasePerm + ".rules")) {
                         for (String rulesLine : plugin.getConfigSettings().getRules()) {
+                            rulesLine = rulesLine.replace("{prefix}", plugin.getConfigSettings().getPrefix());
                             rulesLine = PlaceholderAPI.setPlaceholders(player, rulesLine);
 
                             player.sendMessage(translateAlternateColorCodes('&', rulesLine));
@@ -104,14 +107,15 @@ public class ServerInfoCommand extends BukkitCommand {
                     for (Arguments arguments : plugin.getConfigSettings().getCustomArguments()) {
                         if (args[0].equalsIgnoreCase(arguments.getArgument())) {
                             InvalidArgument = false;
-                            CustomArgumentUtils.doArgumentWork(arguments, player);
+                            CustomArgumentUtils.doArgumentWork(arguments, player, plugin.getConfigSettings().getPrefix());
                             break;
                         } else if (arguments.getAlias() != null) {
                             if (InvalidArgument == true) {
                                 for (String argumentAlias : arguments.getAlias()) {
                                     if (args[0].equalsIgnoreCase(argumentAlias)) {
                                         InvalidArgument = false;
-                                        CustomArgumentUtils.doArgumentWork(arguments, player);
+
+                                        CustomArgumentUtils.doArgumentWork(arguments, player, plugin.getConfigSettings().getPrefix());
                                         break;
                                     }
                                 }
@@ -129,10 +133,8 @@ public class ServerInfoCommand extends BukkitCommand {
 
         } else {
             if (args[0].equalsIgnoreCase("reload")) {
-                plugin.getConfigSettings().getAllSettings();
+                plugin.reloadPlugin();
                 sender.sendMessage(translateAlternateColorCodes('&', "Updated Config"));
-
-
             } else {
                 sender.sendMessage("You must be a player to run this command");
             }

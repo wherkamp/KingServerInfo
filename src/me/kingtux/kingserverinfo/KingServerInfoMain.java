@@ -1,6 +1,7 @@
 package me.kingtux.kingserverinfo;
 
 
+import me.kingtux.kingserverinfo.bstats.Metrics;
 import me.kingtux.kingserverinfo.commands.ServerInfoCommand;
 import me.kingtux.kingserverinfo.events.ClickEvent;
 import me.kingtux.kingserverinfo.events.JoinEvent;
@@ -43,21 +44,26 @@ public class KingServerInfoMain extends JavaPlugin {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            //ItemStack itemStack = new ItemStack(Material.getMaterial(""), 1);
-            //if (itemStack instanceof Colorable) {
-            //    if (configManager.getMainConfig().getString("Item.Path") != null) {
-            //       Colorable cl = ((Colorable) itemStack.getData());
-            //       cl.setColor(DyeColor.valueOf(""));
-            //  }
-            //}
             enableEvents();
             mediaGui = new MediaGui(this);
+            Metrics metrics = new Metrics(this);
 
 
         } else {
             throw new RuntimeException("I find your lack of the PlaceHolderAPI disturbing.");
         }
 
+
+
+    }
+
+    public void reloadPlugin() {
+        configManager.reloadConfig();
+        configSettings.getAllSettings();
+
+        Bukkit.getLogger().log(Level.INFO,
+                ChatColor.translateAlternateColorCodes('&',
+                        configSettings.getPrefix() + " Successfully Got the Config and Settings"));
 
     }
 

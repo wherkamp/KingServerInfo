@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KingServerInfo">
+    <output-path>$PROJECT_DIR$/out/artifacts/KingServerInfo</output-path>
+    <root id="archive" name="KingServerInfo.jar">
+      <element id="module-output" name="KingServerInfo" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/resources/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/resources/CustomArguments.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/resources/config.yml" />
+    </root>
+  </artifact>
+</component>

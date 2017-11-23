@@ -1,5 +1,6 @@
 #KingServerInfo by KingTux
 #Website wherkamp.github.io
+#If you want the prefix to show up use the {prefix} placeholder
 prefix: '[ServerInfo]&r'
 
 BaseCommand: serverinfo
@@ -60,5 +61,5 @@ Media:
             Sub-Text:
                - 'Click Here to go to our Website'
 
-# Color will be ignored ifcolorable is not allowed
-#Avaible Place Holder
+# Color will be ignored if colorable is not allowed
+#Placeholder API is implemented.
