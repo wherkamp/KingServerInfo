@@ -5,6 +5,7 @@ import me.kingtux.kingserverinfo.KingServerInfoMain;
 import me.kingtux.kingserverinfo.utils.CustomArgumentUtils;
 import me.kingtux.kingserverinfo.utils.JsonManager;
 import net.md_5.bungee.api.chat.TextComponent;
+import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
@@ -35,7 +36,7 @@ public class ServerInfoCommand extends BukkitCommand {
             Player player = (Player) sender;
 
             if (args.length == 0) {
-                if (player.hasPermission(BasePerm + "serverinfo")) {
+                if (player.hasPermission(BasePerm + ".serverinfo")) {
                     for (String Message : plugin.getConfigSettings().getBaseCommandDataInfo()) {
                         Message = Message.replace("{prefix}", plugin.getConfigSettings().getPrefix());
                         Message = translateAlternateColorCodes('&', Message);
@@ -44,12 +45,12 @@ public class ServerInfoCommand extends BukkitCommand {
                         player.sendMessage(Message);
                     }
                 } else {
-                    player.sendMessage(translateAlternateColorCodes('&', "&4You do not have permission for this command."));
+                    player.sendMessage(ChatColor.DARK_RED + "You lack the permissions to do that");
                 }
 
             } else {
                 if (args[0].equalsIgnoreCase("reload")) {
-                    if (player.hasPermission("kingserverinfo.command.reload")) {
+                    if (player.hasPermission(BasePerm + ".reload")) {
                         plugin.reloadPlugin();
                         player.sendMessage(translateAlternateColorCodes('&', plugin.getConfigSettings().getPrefix() + " Config Reloaded"));
                     } else {
@@ -59,7 +60,7 @@ public class ServerInfoCommand extends BukkitCommand {
                     if (player.hasPermission(BasePerm + ".media")) {
                         player.openInventory(plugin.getMediaGui().createMediaGui());
                     } else {
-                        player.sendMessage(translateAlternateColorCodes('&', "&4You do not have permission for this command."));
+                        player.sendMessage(ChatColor.DARK_RED + "You lack the permissions to do that");
 
                     }
                 } else if (args[0].equalsIgnoreCase("rules")) {
@@ -71,61 +72,74 @@ public class ServerInfoCommand extends BukkitCommand {
                             player.sendMessage(translateAlternateColorCodes('&', rulesLine));
                         }
                     } else {
-                        player.sendMessage(translateAlternateColorCodes('&', "&4You do not have permission for this command."));
+                        player.sendMessage(ChatColor.DARK_RED + "You lack the permissions to do that");
                     }
                 } else if (args[0].equalsIgnoreCase("owner")) {
-                    player.sendMessage(translateAlternateColorCodes('&', "&2Our Owner is "));
-                    player.spigot().sendMessage(JsonManager.MakeHoverableMessage(
-                            plugin.getConfigSettings().getOwner(),
-                            plugin.getConfigSettings().getOwnerInfo()));
+                    if (player.hasPermission(BasePerm + ".owner")) {
+                        player.sendMessage(translateAlternateColorCodes('&', "&2Our Owner is "));
+                        player.spigot().sendMessage(JsonManager.MakeHoverableMessage(
+                                plugin.getConfigSettings().getOwner(),
+                                plugin.getConfigSettings().getOwnerInfo()));
+                    } else {
+                        player.sendMessage(ChatColor.DARK_RED + "You lack the permissions to do that");
+                    }
                 } else if (args[0].equalsIgnoreCase("staff")) {
-                    player.sendMessage(translateAlternateColorCodes('&', "&2If the name is green the player is online!"));
-                    for (TextComponent textComponent : plugin.getConfigSettings().getStaffList()) {
+                    if (player.hasPermission(BasePerm + ".staff")) {
+                        player.sendMessage(translateAlternateColorCodes('&', "&2If the name is green the player is online!"));
+                        for (TextComponent textComponent : plugin.getConfigSettings().getStaffList()) {
 
-                        player.spigot().sendMessage(textComponent);
+                            player.spigot().sendMessage(textComponent);
 
+                        }
+                    } else {
+                        player.sendMessage(ChatColor.DARK_RED + "You lack the permissions to do that");
                     }
                 } else if (args[0].equalsIgnoreCase("help")) {
+                    if (player.hasPermission(BasePerm + ".help")) {
+                        String argumentHelp = "&2The Base Command is equal to /" + plugin.getConfigSettings().getServerInfoCommand() + ".\n" +
+                                "&2 All the subs commands will be listed below." +
+                                "\n &2 staff: &Awhich list all the staff" +
+                                "\n &2 owner: &Awhich will list the owner" +
+                                "\n &2 media: &Awhich will open the media gui" +
+                                "\n &2 rules: &Awhich will list the rules" +
+                                "\n &2 Just the Basecommand will list the general server info,\n";
 
-                    String argumentHelp = "&2The Base Command is equal to /" + plugin.getConfigSettings().getServerInfoCommand() + ".\n" +
-                            "&2 All the subs commands will be listed below." +
-                            "\n &2 staff: &Awhich list all the staff" +
-                            "\n &2 owner: &Awhich will list the owner" +
-                            "\n &2 media: &Awhich will open the media gui" +
-                            "\n &2 rules: &Awhich will list the rules" +
-                            "\n &2 Just the Basecommand will list the general server info,\n";
+                        for (Arguments arguments : plugin.getConfigSettings().getCustomArguments()) {
+                            argumentHelp = argumentHelp + arguments.getArgument() + ": &A" + arguments.getDescription() + ", \n &2";
+                        }
+                        player.sendMessage(translateAlternateColorCodes('&', argumentHelp));
 
-                    for (Arguments arguments : plugin.getConfigSettings().getCustomArguments()) {
-                        argumentHelp = argumentHelp + arguments.getArgument() + ": &A" + arguments.getDescription() + ", \n &2";
+                    } else {
+                        player.sendMessage(ChatColor.DARK_RED + "You lack the permissions to do that");
                     }
-                    player.sendMessage(translateAlternateColorCodes('&', argumentHelp));
-
-
                 } else {
                     Boolean InvalidArgument = true;
 
                     for (Arguments arguments : plugin.getConfigSettings().getCustomArguments()) {
-                        if (args[0].equalsIgnoreCase(arguments.getArgument())) {
-                            InvalidArgument = false;
-                            CustomArgumentUtils.doArgumentWork(arguments, player, plugin.getConfigSettings().getPrefix());
-                            break;
-                        } else if (arguments.getAlias() != null) {
-                            if (InvalidArgument == true) {
-                                for (String argumentAlias : arguments.getAlias()) {
-                                    if (args[0].equalsIgnoreCase(argumentAlias)) {
-                                        InvalidArgument = false;
+                        if (player.hasPermission(BasePerm + "." + arguments.getArgument())) {
+                            if (args[0].equalsIgnoreCase(arguments.getArgument())) {
+                                InvalidArgument = false;
+                                CustomArgumentUtils.doArgumentWork(arguments, player, plugin.getConfigSettings().getPrefix());
+                                break;
+                            } else if (arguments.getAlias() != null) {
+                                if (InvalidArgument) {
+                                    for (String argumentAlias : arguments.getAlias()) {
+                                        if (args[0].equalsIgnoreCase(argumentAlias)) {
+                                            InvalidArgument = false;
 
-                                        CustomArgumentUtils.doArgumentWork(arguments, player, plugin.getConfigSettings().getPrefix());
-                                        break;
+                                            CustomArgumentUtils.doArgumentWork(arguments, player, plugin.getConfigSettings().getPrefix());
+                                            break;
+                                        }
                                     }
                                 }
                             }
+                        } else {
+                            player.sendMessage(ChatColor.DARK_RED + "You lack the permissions to do that");
                         }
                     }
-                    if (InvalidArgument == true) {
+                    if (InvalidArgument) {
                         player.sendMessage(translateAlternateColorCodes('&', "&4Invalid argument"));
 
-                    } else {
                     }
                 }
 
