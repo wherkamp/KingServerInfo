@@ -7,7 +7,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 public class CustomArgumentUtils {
-    static String prefix;
+    private static String prefix;
 
     public static void doArgumentWork(Arguments arguments, Player player, String prefix2) {
         prefix = prefix2;
@@ -40,20 +40,20 @@ public class CustomArgumentUtils {
 
     }
 
-    public static void sendPlayerMessage(Player p, String Message) {
+    private static void sendPlayerMessage(Player p, String Message) {
         Message = Message.replace("{prefix}", prefix);
         Message = PlaceholderAPI.setPlaceholders(p, Message);
         p.sendMessage(ChatColor.translateAlternateColorCodes('&', Message));
     }
 
-    public static void sendBroudcastMessage(Player p, String Message) {
+    private static void sendBroudcastMessage(Player p, String Message) {
         Message = Message.replace("{prefix}", prefix);
         Message = PlaceholderAPI.setPlaceholders(p, Message);
         Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&', Message));
 
     }
 
-    public static void runConsoleCommand(Player p, String Message) {
+    private static void runConsoleCommand(Player p, String Message) {
         if (p != null) {
             Message = Message.replace("%player_displayname%", p.getName());
             Bukkit.getServer().dispatchCommand(Bukkit.getServer().getConsoleSender(), Message);
@@ -62,7 +62,7 @@ public class CustomArgumentUtils {
 
     }
 
-    public static void runPlayerCommand(Player p, String Message) {
+    private static void runPlayerCommand(Player p, String Message) {
         Bukkit.getServer().dispatchCommand(p, Message);
     }
 

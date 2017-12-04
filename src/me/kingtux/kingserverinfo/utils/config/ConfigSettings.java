@@ -25,7 +25,7 @@ public class ConfigSettings {
         return customArguments;
     }
 
-    public ConfigSettings(ConfigManager configManager) {
+    protected ConfigSettings(ConfigManager configManager) {
         this.configManager = configManager;
         getAllSettings();
     }
@@ -52,11 +52,11 @@ public class ConfigSettings {
     }
 
     private void getNewArgumentsFromConfig() {
-        customArguments = new ArrayList<Arguments>();
+        customArguments = new ArrayList<>();
         for (String stringArguments : configManager.getArgumentsConfig().getConfigurationSection("Arguments").getKeys(false)) {
 
             String basePathToArguments = "Arguments." + stringArguments;
-            if (checkArgumentConfig(basePathToArguments) == true) {
+            if (checkArgumentConfig(basePathToArguments)) {
                 Arguments argument;
                 String argumentArg = stringArguments;
                 List<String> argumentAlias = configManager.getArgumentsConfig().getStringList(basePathToArguments + ".Alias");
@@ -74,7 +74,7 @@ public class ConfigSettings {
     }
 
     private void getMediaGuifromConfig() {
-        guiItems = new ArrayList<Items>();
+        guiItems = new ArrayList<>();
 
         for (final String ItemName : configManager.getMainConfig().getConfigurationSection("Media.Items").getKeys(false)) {
             String Position = "Media.Items." + ItemName;
@@ -92,7 +92,7 @@ public class ConfigSettings {
 
 
     private void getStaffFromConfig() {
-        staffList = new ArrayList<TextComponent>();
+        staffList = new ArrayList<>();
         for (final String StaffMember : configManager.getMainConfig().getConfigurationSection("Staff.Staff-Members").getKeys(false)) {
 
             String StaffMemberInfo = configManager.getMainConfig().getString("Staff.Staff-Members." + StaffMember + ".Staff-Info");

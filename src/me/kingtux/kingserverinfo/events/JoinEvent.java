@@ -30,7 +30,7 @@ public class JoinEvent implements Listener {
         }
         List<String> onJoinPersonalMessage = plugin.getConfigSettings().getOnJoinPersonalMessage();
         for (String s : onJoinPersonalMessage) {
-            String PlaceHolderMessage = PlaceholderAPI.setPlaceholders(player, s).toString();
+            String PlaceHolderMessage = PlaceholderAPI.setPlaceholders(player, s);
             player.sendMessage(ChatColor.translateAlternateColorCodes('&',
                     plugin.getConfigSettings().getPrefix() + " " + PlaceHolderMessage));
         }

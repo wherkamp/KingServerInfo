@@ -27,12 +27,12 @@ public class ConfigManager {
         mainConfig = new File(mainclass.getDataFolder(), "config.yml");
         if (!(mainConfig.exists())) {
             //Create The Config
-            mainclass.logger.log(Level.WARNING, "The Config did not exist creating one");
+            mainclass.getLogger().log(Level.WARNING, "The Config did not exist creating one");
             mainclass.saveDefaultConfig();
 
         }
         if (!(argumentsFile.exists())) {
-            mainclass.logger.log(Level.WARNING, "The Arguments Config did not exist creating one");
+            mainclass.getLogger().log(Level.WARNING, "The Arguments Config did not exist creating one");
             mainclass.saveResource("CustomArguments.yml", false);
 
         }
@@ -48,9 +48,7 @@ public class ConfigManager {
 
     }
 
-    public void setupConfigSettings() {
-
-
+    private void setupConfigSettings() {
         mainclass.setConfigSettings(new ConfigSettings(this));
     }
 
@@ -67,9 +65,9 @@ public class ConfigManager {
         try {
             argumentsConfig.load(argumentsFile);
             getMainConfig().load(mainConfig);
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (InvalidConfigurationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
