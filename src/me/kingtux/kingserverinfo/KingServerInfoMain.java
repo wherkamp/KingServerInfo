@@ -69,7 +69,8 @@ public class KingServerInfoMain extends JavaPlugin {
 
 
     public void onDisable() {
-
+        //Trying to clear out all used memory used by Configsettings
+        System.gc();
     }
 
     public ConfigSettings getConfigSettings() {

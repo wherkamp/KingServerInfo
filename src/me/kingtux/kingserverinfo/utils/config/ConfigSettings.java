@@ -1,13 +1,13 @@
 package me.kingtux.kingserverinfo.utils.config;
 
 import me.kingtux.kingserverinfo.commands.Arguments;
-import me.kingtux.kingserverinfo.utils.JsonManager;
 import me.kingtux.kingserverinfo.utils.MediaGui.Items;
-import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Level;
 
 
@@ -16,7 +16,12 @@ public class ConfigSettings {
     private int mediaSize;
     private String prefix, serverInfoCommand, serverInfoDescription, ownerInfo, guiTitle, owner;
     private List<String> baseCommandDataInfo, rules, onJoinBroudcastMessage, onJoinPersonalMessage, onLeaveMessage;
-    private ArrayList<TextComponent> staffList;
+
+    private Map<String, String> staffList;
+
+    public Map<String, String> getStaffList() {
+        return staffList;
+    }
     private ArrayList<Items> guiItems;
 
     private ArrayList<Arguments> customArguments;
@@ -90,13 +95,12 @@ public class ConfigSettings {
         }
     }
 
-
     private void getStaffFromConfig() {
-        staffList = new ArrayList<>();
+        staffList = new HashMap<>();
         for (final String StaffMember : configManager.getMainConfig().getConfigurationSection("Staff.Staff-Members").getKeys(false)) {
 
             String StaffMemberInfo = configManager.getMainConfig().getString("Staff.Staff-Members." + StaffMember + ".Staff-Info");
-            staffList.add(JsonManager.MakeHoverableMessage(StaffMember, StaffMemberInfo));
+            staffList.put(StaffMember, StaffMemberInfo);
         }
 
     }
@@ -130,10 +134,6 @@ public class ConfigSettings {
 
     public List<String> getRules() {
         return rules;
-    }
-
-    public ArrayList<TextComponent> getStaffList() {
-        return staffList;
     }
 
     public List<String> getOnJoinBroudcastMessage() {

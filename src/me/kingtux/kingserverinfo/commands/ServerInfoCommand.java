@@ -4,7 +4,6 @@ import me.clip.placeholderapi.PlaceholderAPI;
 import me.kingtux.kingserverinfo.KingServerInfoMain;
 import me.kingtux.kingserverinfo.utils.CustomArgumentUtils;
 import me.kingtux.kingserverinfo.utils.JsonManager;
-import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
@@ -86,9 +85,11 @@ public class ServerInfoCommand extends BukkitCommand {
                 } else if (args[0].equalsIgnoreCase("staff")) {
                     if (player.hasPermission(BasePerm + ".staff")) {
                         player.sendMessage(translateAlternateColorCodes('&', "&2If the name is green the player is online!"));
-                        for (TextComponent textComponent : plugin.getConfigSettings().getStaffList()) {
+                        for (String textComponent : plugin.getConfigSettings().getStaffList().keySet()) {
 
-                            player.spigot().sendMessage(textComponent);
+                            player.spigot().sendMessage(
+                                    JsonManager.MakeHoverableMessage
+                                            (textComponent, plugin.getConfigSettings().getStaffList().get(textComponent)));
 
                         }
                     } else {

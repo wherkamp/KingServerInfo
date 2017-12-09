@@ -10,14 +10,11 @@ import org.bukkit.Bukkit;
 public class JsonManager {
 
     public static TextComponent MakeHoverableMessage(String Player, String HoverText) {
-
-
-        if (Bukkit.getServer().getPlayer(Player) == null) {
-            Player = " &4" + Player;
-        } else {
+        if (Bukkit.getServer().getPlayer(Player) != null) {
             Player = " &2" + Player;
+        } else {
+            Player = " &4" + Player;
         }
-
         Player = ChatColor.translateAlternateColorCodes('&', Player);
         ComponentBuilder build = new ComponentBuilder(HoverText);
         TextComponent message = new TextComponent(Player);
