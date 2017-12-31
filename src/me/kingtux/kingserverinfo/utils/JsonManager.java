@@ -9,7 +9,7 @@ import org.bukkit.Bukkit;
 
 public class JsonManager {
 
-    public static TextComponent MakeHoverableMessage(String Player, String HoverText) {
+    public static TextComponent makeHoverableMessage(String Player, String HoverText) {
         if (Bukkit.getServer().getPlayer(Player) != null) {
             Player = " &2" + Player;
         } else {
@@ -24,7 +24,7 @@ public class JsonManager {
     }
 
 
-    public static TextComponent MakeLinkText(String Link) {
+    public static TextComponent makeLinkText(String Link) {
         ComponentBuilder build = new ComponentBuilder("Click here to go to " + Link);
         TextComponent LinkMessage = new TextComponent(Link);
         LinkMessage.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, build.create()));

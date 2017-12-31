@@ -76,7 +76,7 @@ public class ServerInfoCommand extends BukkitCommand {
                 } else if (args[0].equalsIgnoreCase("owner")) {
                     if (player.hasPermission(BasePerm + ".owner")) {
                         player.sendMessage(translateAlternateColorCodes('&', "&2Our Owner is "));
-                        player.spigot().sendMessage(JsonManager.MakeHoverableMessage(
+                        player.spigot().sendMessage(JsonManager.makeHoverableMessage(
                                 plugin.getConfigSettings().getOwner(),
                                 plugin.getConfigSettings().getOwnerInfo()));
                     } else {
@@ -88,7 +88,7 @@ public class ServerInfoCommand extends BukkitCommand {
                         for (String textComponent : plugin.getConfigSettings().getStaffList().keySet()) {
 
                             player.spigot().sendMessage(
-                                    JsonManager.MakeHoverableMessage
+                                    JsonManager.makeHoverableMessage
                                             (textComponent, plugin.getConfigSettings().getStaffList().get(textComponent)));
 
                         }

@@ -1,7 +1,7 @@
 package me.kingtux.kingserverinfo.utils.config;
 
 import me.kingtux.kingserverinfo.commands.Arguments;
-import me.kingtux.kingserverinfo.utils.MediaGui.Items;
+import me.kingtux.kingserverinfo.utils.mediagui.Items;
 import org.bukkit.Bukkit;
 
 import java.util.ArrayList;

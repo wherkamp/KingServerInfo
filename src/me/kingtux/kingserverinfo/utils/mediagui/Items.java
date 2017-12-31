@@ -1,4 +1,4 @@
-package me.kingtux.kingserverinfo.utils.MediaGui;
+package me.kingtux.kingserverinfo.utils.mediagui;
 
 import me.kingtux.kingserverinfo.utils.JsonManager;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -18,7 +18,7 @@ public class Items {
         this.name = name;
         this.itemName = itemName;
         this.itemType = itemType.toUpperCase();
-        this.link = JsonManager.MakeLinkText(link);
+        this.link = JsonManager.makeLinkText(link);
         this.clickable = clickable;
         this.subText = subText;
         if (color != null) {

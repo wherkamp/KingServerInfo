@@ -12,6 +12,7 @@ import java.util.logging.Level;
 public class ConfigManager {
     private KingServerInfoMain mainclass;
     private File mainConfig;
+    private double configVersion, currentVersion;
 
     private File argumentsFile;
     private FileConfiguration argumentsConfig;
@@ -45,7 +46,20 @@ public class ConfigManager {
         }
 
         setupConfigSettings();
+        configVersion = getVersion();
+        if (configVersion == 0) {
+            getMainConfig().set("Config-Version", 1.0);
+            try {
+                getMainConfig().save(mainConfig);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        new ConfigUpdater(getMainConfig()).updateConfig();
+    }
 
+    private double getVersion() {
+        return getMainConfig().getDouble("Config-Version");
     }
 
     private void setupConfigSettings() {

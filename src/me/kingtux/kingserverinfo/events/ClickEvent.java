@@ -2,7 +2,7 @@ package me.kingtux.kingserverinfo.events;
 
 
 import me.kingtux.kingserverinfo.KingServerInfoMain;
-import me.kingtux.kingserverinfo.utils.MediaGui.Items;
+import me.kingtux.kingserverinfo.utils.mediagui.Items;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;

@@ -1,6 +1,7 @@
 #KingServerInfo by KingTux
 #Website wherkamp.github.io
 #If you want the prefix to show up use the {prefix} placeholder
+Config-Version: 1.0;
 prefix: '[ServerInfo]&r'
 
 BaseCommand: serverinfo

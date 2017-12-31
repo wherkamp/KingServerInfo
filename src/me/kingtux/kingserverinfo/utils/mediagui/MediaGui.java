@@ -1,4 +1,4 @@
-package me.kingtux.kingserverinfo.utils.MediaGui;
+package me.kingtux.kingserverinfo.utils.mediagui;
 
 import me.kingtux.kingserverinfo.KingServerInfoMain;
 import org.bukkit.Bukkit;
