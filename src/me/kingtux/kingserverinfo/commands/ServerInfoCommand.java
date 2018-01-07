@@ -5,20 +5,25 @@ import me.kingtux.kingserverinfo.KingServerInfoMain;
 import me.kingtux.kingserverinfo.utils.CustomArgumentUtils;
 import me.kingtux.kingserverinfo.utils.JsonManager;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.bukkit.ChatColor.translateAlternateColorCodes;
 
 public class ServerInfoCommand extends BukkitCommand {
     private KingServerInfoMain plugin;
+    private List<String> args;
+
     private String BasePerm = "kingserverinfo.command";
 
     public ServerInfoCommand(String name, String description, KingServerInfoMain pl) {
         super(name);
+
         this.description = description;
         this.usageMessage = "/<command> <task>";
         this.setPermission("kingserverinfo.command");
@@ -26,7 +31,47 @@ public class ServerInfoCommand extends BukkitCommand {
 
         plugin = pl;
 
+        args = new ArrayList<>();
+        for (Arguments arguments : pl.getConfigSettings().getCustomArguments()) {
+            args.add(arguments.getArgument());
+        }
+        args.add("reload");
+        args.add("owner");
+        args.add("staff");
+        args.add("rules");
+        args.add("media");
+        args.add("help");
 
+    }
+
+    @Override
+    public List<String> tabComplete(CommandSender sender, String alias, String[] args, Location location) throws IllegalArgumentException {
+        List<String> a = new ArrayList<>();
+        if (sender instanceof Player) {
+            Player p = (Player) sender;
+            for (String arg : args) {
+                if (p.hasPermission("kingserverinfo.command." + arg)) {
+                    a.add(arg);
+                }
+
+            }
+        }
+        return a;
+    }
+
+    @Override
+    public List<String> tabComplete(CommandSender sender, String alias, String[] args) throws IllegalArgumentException {
+        List<String> a = new ArrayList<>();
+        if (sender instanceof Player) {
+            Player p = (Player) sender;
+            for (String arg : args) {
+                if (p.hasPermission("kingserverinfo.command." + arg.toLowerCase())) {
+                    a.add(arg);
+                }
+
+            }
+        }
+        return a;
     }
 
     @Override

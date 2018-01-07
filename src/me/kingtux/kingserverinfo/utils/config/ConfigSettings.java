@@ -1,8 +1,12 @@
 package me.kingtux.kingserverinfo.utils.config;
 
 import me.kingtux.kingserverinfo.commands.Arguments;
+import me.kingtux.kingserverinfo.utils.KingTuxUtils;
 import me.kingtux.kingserverinfo.utils.mediagui.Items;
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -48,7 +52,7 @@ public class ConfigSettings {
         owner = configManager.getMainConfig().getString("Staff.Owner.Owner-Name");
         ownerInfo = configManager.getMainConfig().getString("Staff.Owner.Owner-Info");
         mediaSize = configManager.getMainConfig().getInt("Media.Size");
-        guiTitle = configManager.getMainConfig().getString("Media.Title");
+        guiTitle = KingTuxUtils.color(configManager.getMainConfig().getString("Media.Title"));
 
 
         getMediaGuifromConfig();
@@ -83,15 +87,16 @@ public class ConfigSettings {
 
         for (final String ItemName : configManager.getMainConfig().getConfigurationSection("Media.Items").getKeys(false)) {
             String Position = "Media.Items." + ItemName;
-            Items NewItem = new Items(configManager.getMainConfig().getInt(Position + ".Icon.Position"),
-                    configManager.getMainConfig().getString(Position + ".Icon.Name"),
-                    configManager.getMainConfig().getString(Position + ".Icon.Item-Name"),
-                    configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type"),
-                    configManager.getMainConfig().getString(Position + ".Link"),
-                    configManager.getMainConfig().getBoolean(Position + ".Icon.Clickable"),
-                    configManager.getMainConfig().getStringList(Position + ".Icon.Sub-Text"),
-                    configManager.getMainConfig().getString(Position + ".Icon.Item.Color"));
-            guiItems.add(NewItem);
+            ItemStack itemStack = new ItemStack(Material.getMaterial(configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type")));
+            String displayName = configManager.getMainConfig().getString(Position + ".Icon.Item.Display-Name");
+            List<String> lore = configManager.getMainConfig().getStringList(Position + ".Item.Icon.Lore");
+            ItemMeta itemMeta = itemStack.getItemMeta();
+            itemMeta.setDisplayName(KingTuxUtils.color(displayName));
+            itemMeta.setLore(KingTuxUtils.color(lore));
+            itemStack.setItemMeta(itemMeta);
+            Items items = new Items(configManager.getMainConfig().getInt(Position + ".Icon.Position"), itemStack, configManager.getMainConfig().getString(Position + ".Link.Link"), configManager.getMainConfig().getString(Position + ".Link.Before-Link-Message"), configManager.getMainConfig().getBoolean(Position + ".Link.Clickable"));
+            System.out.println(items.toString());
+            guiItems.add(items);
         }
     }
 
@@ -107,7 +112,7 @@ public class ConfigSettings {
 
     private Boolean checkArgumentConfig(String basePathToArguments) {
         if (configManager.getArgumentsConfig().getString(basePathToArguments) == null) {
-            Bukkit.getLogger().log(Level.SEVERE, "All Arguments must have a Description");
+            Bukkit.getLogger().log(Level.SEVERE, "All Arguments must have a Argument?!");
             return false;
         } else if (configManager.getArgumentsConfig().getString(basePathToArguments + ".Description") == null) {
             Bukkit.getLogger().log(Level.SEVERE, "All Arguments must have a Description");

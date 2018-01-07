@@ -24,12 +24,21 @@ public class JsonManager {
     }
 
 
-    public static TextComponent makeLinkText(String Link) {
-        ComponentBuilder build = new ComponentBuilder("Click here to go to " + Link);
-        TextComponent LinkMessage = new TextComponent(Link);
-        LinkMessage.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, build.create()));
-        LinkMessage.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, Link));
-        return LinkMessage;
+    public static TextComponent makeLinkText(String beforeLinkMessage, String link) {
+
+        ComponentBuilder build = new ComponentBuilder("Click here to go to " + link);
+        String message;
+        if (beforeLinkMessage != null && link != null) {
+            message = beforeLinkMessage.replace("{link}", link);
+        } else if (link == null) {
+            message = "127.0.0.1";
+        } else {
+            message = link;
+        }
+        TextComponent linkMessage = new TextComponent(KingTuxUtils.color(message));
+        linkMessage.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, build.create()));
+        linkMessage.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, link));
+        return linkMessage;
     }
 
 }

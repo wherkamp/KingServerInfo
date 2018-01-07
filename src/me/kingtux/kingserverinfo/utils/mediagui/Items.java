@@ -2,30 +2,30 @@ package me.kingtux.kingserverinfo.utils.mediagui;
 
 import me.kingtux.kingserverinfo.utils.JsonManager;
 import net.md_5.bungee.api.chat.TextComponent;
-
-import java.util.List;
+import org.bukkit.inventory.ItemStack;
 
 public class Items {
     private int position;
     private TextComponent link;
-    private String name, itemName, itemType, color;
+    private ItemStack item;
     private Boolean clickable;
-    private List<String> subText;
 
 
-    public Items(int position, String name, String itemName, String itemType, String link, Boolean clickable, List<String> subText, String color) {
+    public Items(int position, ItemStack itemStack, String link, String beforeLinkMessage, Boolean clickable) {
         this.position = position;
-        this.name = name;
-        this.itemName = itemName;
-        this.itemType = itemType.toUpperCase();
-        this.link = JsonManager.makeLinkText(link);
+        item = itemStack;
+        this.link = JsonManager.makeLinkText(beforeLinkMessage, link);
         this.clickable = clickable;
-        this.subText = subText;
-        if (color != null) {
-            this.color = color.toUpperCase();
-        } else {
-            this.color = null;
-        }
+    }
+
+    @Override
+    public String toString() {
+        return "Items{" +
+                "position=" + position +
+                ", link=" + link.toString() +
+                ", item=" + item.toString() +
+                ", clickable=" + clickable +
+                '}';
     }
 
 
@@ -37,41 +37,11 @@ public class Items {
         return link;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getItemName() {
-        return itemName;
-    }
-
-    public String getItemType() {
-        return itemType;
-    }
-
-    public Boolean getClickable() {
+    public Boolean isClickable() {
         return clickable;
     }
 
-    public List<String> getSubText() {
-        return subText;
-    }
-
-    @Override
-    public String toString() {
-        return "Items{" +
-                "position=" + position +
-                ", link=" + link +
-                ", name='" + name + '\'' +
-                ", itemName='" + itemName + '\'' +
-                ", itemType='" + itemType + '\'' +
-                ", clickable=" + clickable +
-                ", subText=" + subText +
-                ", color=" + color +
-                '}';
-    }
-
-    public String getColor() {
-        return color;
+    public ItemStack getItem() {
+        return item;
     }
 }

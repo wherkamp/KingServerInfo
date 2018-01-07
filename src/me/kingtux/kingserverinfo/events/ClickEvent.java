@@ -18,14 +18,12 @@ public class ClickEvent implements Listener {
     public void playerClickEvent(InventoryClickEvent e) {
         if (e.getClickedInventory().equals(plugin.getMediaGui().getMediaGui())) {
             for (Items item : plugin.getMediaGui().getguiItems().keySet()) {
-                if (e.getCurrentItem().equals(plugin.getMediaGui().getguiItems().get(item))) {
-                    if (item.getClickable()) {
+                if (e.getCurrentItem().isSimilar(plugin.getMediaGui().getguiItems().get(item))) {
+                    if (item.isClickable()) {
                         e.getWhoClicked().spigot().sendMessage(item.getLink());
                         e.getWhoClicked().closeInventory();
                         e.setCancelled(true);
                         break;
-
-
                     } else {
                         e.setCancelled(true);
                         break;

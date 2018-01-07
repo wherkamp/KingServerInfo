@@ -35,9 +35,7 @@ public class KingServerInfoMain extends JavaPlugin {
 
                 bukkitCommandMap.setAccessible(true);
                 CommandMap commandMap = (CommandMap) bukkitCommandMap.get(Bukkit.getServer());
-
                 commandMap.register(configSettings.getServerInfoCommand(), new ServerInfoCommand(configSettings.getServerInfoCommand(), configSettings.getServerInfoDescription(), this));
-
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -49,6 +47,7 @@ public class KingServerInfoMain extends JavaPlugin {
 
         } else {
             getLogger().log(Level.SEVERE, "I find your lack of the PlaceHolderAPI disturbing.");
+            getServer().getPluginManager().disablePlugin(this);
         }
 
 

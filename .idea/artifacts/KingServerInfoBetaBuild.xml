@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="KingServerInfoBetaBuild">
-    <output-path>$PROJECT_DIR$/out/artifacts/KingServerInfoBetaBuild</output-path>
+    <output-path>$PROJECT_DIR$/TestServer/plugins</output-path>
     <root id="archive" name="KingServerInfoBetaBuild.jar">
       <element id="module-output" name="KingServerInfo" />
       <element id="file-copy" path="$PROJECT_DIR$/src/resources/plugin.yml" />
