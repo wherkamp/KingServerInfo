@@ -1,6 +1,5 @@
 package me.kingtux.kingserverinfo.events;
 
-
 import me.kingtux.kingserverinfo.KingServerInfoMain;
 import me.kingtux.kingserverinfo.utils.mediagui.Items;
 import org.bukkit.event.EventHandler;

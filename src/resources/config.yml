@@ -64,12 +64,16 @@ Media:
                Lore:
                   - '&3Lore'
             Position: 1
-      Placehodler2:
+      Discord:
          Link:
-            Clickable: false
+            Clickable: true
+            #{link} is a placeholder
+            Before-Link-Message: '&1Click to go to {link} :)'
+            Link: https://wherkamp.github.io
          Icon:
             Item:
-               Item-Type: WOOL
+               #For Custom SKulls to SKULL_ITEM:UUID:THE UUID of Player
+               Item-Type: SKULL_ITEM:UUID:de431cd1-ae1d-49f6-9339-a96daeacc32b
                Display-Name: '&2Welcome to our server!'
                Lore:
                   - '&3Lore'

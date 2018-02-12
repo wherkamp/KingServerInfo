@@ -21,7 +21,6 @@ public class KingServerInfoMain extends JavaPlugin {
     private ConfigManager configManager;
     private ConfigSettings configSettings;
     private MediaGui mediaGui;
-
     public void onEnable() {
         if (Bukkit.getServer().getPluginManager().isPluginEnabled("PlaceholderAPI")) {
             configManager = new ConfigManager(this);

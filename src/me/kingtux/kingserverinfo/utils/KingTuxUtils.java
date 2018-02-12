@@ -35,6 +35,7 @@ public class KingTuxUtils {
      * @return List with the String replaced out of it!
      */
     public static List<String> replaceList(List<String> oldList, String oldString, String newString) {
+
         List<String> newList = new ArrayList<>();
         if (oldList == null) {
             return newList;

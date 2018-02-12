@@ -2,6 +2,7 @@ package me.kingtux.kingserverinfo.utils.config;
 
 import me.kingtux.kingserverinfo.commands.Arguments;
 import me.kingtux.kingserverinfo.utils.KingTuxUtils;
+import me.kingtux.kingserverinfo.utils.SkullParser;
 import me.kingtux.kingserverinfo.utils.mediagui.Items;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -87,7 +88,12 @@ public class ConfigSettings {
 
         for (final String ItemName : configManager.getMainConfig().getConfigurationSection("Media.Items").getKeys(false)) {
             String Position = "Media.Items." + ItemName;
-            ItemStack itemStack = new ItemStack(Material.getMaterial(configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type")));
+            ItemStack itemStack;
+            if (configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type").contains(":UUID:")) {
+                itemStack = SkullParser.createSkull(configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type"));
+            } else {
+                itemStack = new ItemStack(Material.getMaterial(configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type")));
+            }
             String displayName = configManager.getMainConfig().getString(Position + ".Icon.Item.Display-Name");
             List<String> lore = configManager.getMainConfig().getStringList(Position + ".Item.Icon.Lore");
             ItemMeta itemMeta = itemStack.getItemMeta();
@@ -95,7 +101,7 @@ public class ConfigSettings {
             itemMeta.setLore(KingTuxUtils.color(lore));
             itemStack.setItemMeta(itemMeta);
             Items items = new Items(configManager.getMainConfig().getInt(Position + ".Icon.Position"), itemStack, configManager.getMainConfig().getString(Position + ".Link.Link"), configManager.getMainConfig().getString(Position + ".Link.Before-Link-Message"), configManager.getMainConfig().getBoolean(Position + ".Link.Clickable"));
-            System.out.println(items.toString());
+            //System.out.println(items.toString());
             guiItems.add(items);
         }
     }
