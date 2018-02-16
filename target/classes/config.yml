@@ -1,0 +1,142 @@
+#KingServerInfo by KingTux
+#Website wherkamp.github.io
+#If you want the prefix to show up use the {prefix} placeholder
+Config-Version: 1.1
+prefix: '[ServerInfo]&r'
+
+BaseCommand: serverinfo
+
+BaseCommand-description: 'Run this for info'
+
+BaseCommand-data-info:
+   - '&2Welcome to the server'
+   - '&3Give KingServerInfo a 5 star review!'
+Rules:
+   - 'Do not say cow'
+   - 'Do not say two chickens'
+
+OnJoin-Event:
+   Broudcast-Message:
+      - 'Welcome %player_displayname% to the server'
+   Personal-Message:
+      - 'Stay awhile and listen'
+OnLeave-Event:
+   Broudcast-Message:
+      - 'Say Good Bye to %player_displayname%'
+#If the Staff is Online his name will be green. If he is online his name will be red.
+#Also when you hover over the name it will give the Staff-Info of the Staff
+Staff:
+   Owner:
+      Owner-Name: KingTux
+      Owner-Info: 'Our Leader KingTux is the greatest person ever'
+   Staff-Members:
+      Little_Wes:
+         Staff-Info: 'He is our Leaders greatest assistant'
+      FedoraCraft:
+         Staff-Info: 'He is useless'
+#https:// or http:// must be added before every link :)
+
+Media:
+   Size: 9
+   Title: '&1Media gui for KingServerInfo'
+   Items:
+      Website:
+         Link:
+            #If Clickable is equal to false you don't need a Link..
+            Clickable: true
+            #{link} is a placeholder
+            Before-Link-Message: '&1Click to go to {link} :)'
+            Link: https://wherkamp.github.io
+         Icon:
+            Item:
+               Item-Type: BOOK
+               Display-Name: '&2Website'
+               Lore:
+                  - '&3Lore'
+            Position: 0
+      Placehodler1:
+         Link:
+            Clickable: false
+         Icon:
+            Item:
+               Item-Type: WOOL
+               Display-Name: '&2Welcome to our server!'
+               Lore:
+                  - '&3Lore'
+            Position: 1
+      Discord:
+         Link:
+            Clickable: true
+            #{link} is a placeholder
+            Before-Link-Message: '&1Click to go to {link} :)'
+            Link: https://wherkamp.github.io
+         Icon:
+            Item:
+               #For Custom SKulls to SKULL_ITEM:UUID:THE UUID of Player
+               Item-Type: SKULL_ITEM:UUID:de431cd1-ae1d-49f6-9339-a96daeacc32b
+               Display-Name: '&2Welcome to our server!'
+               Lore:
+                  - '&3Lore'
+            Position: 2
+      Placehodler3:
+         Link:
+            Clickable: false
+         Icon:
+            Item:
+               Item-Type: WOOL
+               Display-Name: '&2Welcome to our server!'
+               Lore:
+                  - '&3Lore'
+            Position: 3
+      Placehodler4:
+         Link:
+            Clickable: false
+         Icon:
+            Item:
+               Item-Type: WOOL
+               Display-Name: '&2Welcome to our server!'
+               Lore:
+                  - '&3Lore'
+            Position: 4
+      Placehodler5:
+         Link:
+            Clickable: false
+         Icon:
+            Item:
+               Item-Type: WOOL
+               Display-Name: '&2Welcome to our server!'
+               Lore:
+                  - '&3Lore'
+            Position: 5
+      Placehodler6:
+         Link:
+            Clickable: false
+         Icon:
+            Item:
+               Item-Type: WOOL
+               Display-Name: '&2Welcome to our server!'
+               Lore:
+                  - '&3Lore'
+            Position: 6
+      Placehodler7:
+         Link:
+            Clickable: false
+         Icon:
+            Item:
+               Item-Type: WOOL
+               Display-Name: '&2Welcome to our server!'
+               Lore:
+                  - '&3Lore'
+            Position: 7
+      Placehodler8:
+         Link:
+            Clickable: false
+         Icon:
+            Item:
+               Item-Type: WOOL
+               Display-Name: '&2Welcome to our server!'
+               Lore:
+                  - '&3Lore'
+            Position: 8
+# Color will be ignored if colorable is not allowed
+#Placeholder API is implemented.

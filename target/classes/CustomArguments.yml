@@ -1,0 +1,19 @@
+#Everyone New Arguments must be one word long and will work using equalsIgnoreCase()
+#Permissions will be kingserverinfo.command.{argument}
+#PlaceholderAPI placeholders are allowed
+#You cannot overwrite a hardcoded Argument Such as <command> staff
+
+Arguments:
+   QA:
+      Alias:
+         - qanda
+      Player-Message:
+         - 'No we do not sell pandas, %player%'
+      Broudcast-Message:
+         - '%player_displayname% wondered if we sold pandas'
+      Console-Commands:
+         - 'error %player_displayname%'
+      Player-Commands:
+         - 'error %player_displayname%'
+      Description: 'This will answers some basic questions.'
+

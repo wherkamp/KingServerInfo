@@ -1,0 +1,6 @@
+name: KingServerInfo
+main: me.kingtux.kingserverinfo.KingServerInfoMain
+version: 1.2
+author: KingTux
+loadbefore: [PlaceholderAPI]
+depend: [PlaceholderAPI]

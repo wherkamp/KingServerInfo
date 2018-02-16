@@ -1,0 +1,21 @@
+timestamps:
+  lastteleport: 1514784055575
+  logout: 1515367684556
+  login: 1515367785660
+lastlocation:
+  world: world
+  x: 247.68024156932734
+  y: 64.0
+  z: 318.69999998807907
+  yaw: -93.56372
+  pitch: 1.988794
+logoutlocation:
+  world: world
+  x: 267.596926681736
+  y: 97.93843617992641
+  z: -1583.9294639553007
+  yaw: -218.5863
+  pitch: 36.747482
+lastAccountName: KingTux
+ipAddress: 127.0.0.1
+afk: false
