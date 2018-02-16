@@ -1,5 +1,4 @@
-# KingServerInfo 
-[![Build Status](http://ci.kingtux.me/job/KingServerInfo/badge/icon)](http://ci.kingtux.me/job/KingServerInfo/)
+# KingServerInfo [![Build Status](http://ci.kingtux.me/job/KingServerInfo/badge/icon)](http://ci.kingtux.me/job/KingServerInfo/)
 
                                          
 
