@@ -6,81 +6,37 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714184b9-584e-4c7b-9d62-e69d3175f6ff" name="Default" comment="Back to Regular Spigot :)">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_bukkit_1_12_2_R0_1_SNAPSHOT.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_2_30.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_2_30.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_2_30.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_test_1_2_30.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_12_2_R0_1_SNAPSHOT.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/KingServerInfoMain.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/commands/Arguments.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/commands/ServerInfoCommand.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/events/ClickEvent.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/events/JoinEvent.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/events/LeaveEvent.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/CustomArgumentUtils.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/JsonManager.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/KingTuxUtils.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/SkullParser.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/config/ConfigManager.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/config/ConfigSettings.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/config/ConfigUpdater.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/mediagui/Items.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/mediagui/MediaGui.kt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/resources/lang.yml" />
-      <change beforePath="$PROJECT_DIR$/.idea/KingServerInfo.iml" afterPath="$PROJECT_DIR$/.idea/KingServerInfo.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_12_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_12_SNAPSHOT.xml" />
+    <list default="true" id="714184b9-584e-4c7b-9d62-e69d3175f6ff" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/TestServer/world/stats/d087006b-d72c-4cdf-924d-6f903704d05c.json" afterPath="$PROJECT_DIR$/TestServer/world/stats/d087006b-d72c-4cdf-924d-6f903704d05c.json" />
-      <change beforePath="$PROJECT_DIR$/help/config.yml.html" afterPath="$PROJECT_DIR$/help/config.yml.html" />
-      <change beforePath="$PROJECT_DIR$/help/customarguments.yml.html" afterPath="$PROJECT_DIR$/help/customarguments.yml.html" />
-      <change beforePath="$PROJECT_DIR$/help/index.html" afterPath="$PROJECT_DIR$/help/index.html" />
+      <change beforePath="$PROJECT_DIR$/TestServer/logs/latest.log" afterPath="$PROJECT_DIR$/TestServer/logs/latest.log" />
+      <change beforePath="$PROJECT_DIR$/TestServer/plugins/Essentials/items.csv" afterPath="$PROJECT_DIR$/TestServer/plugins/Essentials/items.csv" />
+      <change beforePath="$PROJECT_DIR$/TestServer/plugins/KingServerInfoBetaBuild.jar" afterPath="$PROJECT_DIR$/TestServer/plugins/KingServerInfoBetaBuild.jar" />
+      <change beforePath="$PROJECT_DIR$/TestServer/plugins/LuckPerms/luckperms-h2.mv.db" afterPath="$PROJECT_DIR$/TestServer/plugins/LuckPerms/luckperms-h2.mv.db" />
+      <change beforePath="$PROJECT_DIR$/TestServer/server.properties" afterPath="$PROJECT_DIR$/TestServer/server.properties" />
+      <change beforePath="$PROJECT_DIR$/TestServer/spigot.yml" afterPath="$PROJECT_DIR$/TestServer/spigot.yml" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world/data/villages.dat" afterPath="$PROJECT_DIR$/TestServer/world/data/villages.dat" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world/level.dat" afterPath="$PROJECT_DIR$/TestServer/world/level.dat" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world/level.dat_old" afterPath="$PROJECT_DIR$/TestServer/world/level.dat_old" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world/region/r.0.0.mca" afterPath="$PROJECT_DIR$/TestServer/world/region/r.0.0.mca" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world/session.lock" afterPath="$PROJECT_DIR$/TestServer/world/session.lock" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_nether/DIM-1/region/r.-1.-1.mca" afterPath="$PROJECT_DIR$/TestServer/world_nether/DIM-1/region/r.-1.-1.mca" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_nether/DIM-1/region/r.-1.0.mca" afterPath="$PROJECT_DIR$/TestServer/world_nether/DIM-1/region/r.-1.0.mca" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_nether/DIM-1/region/r.0.-1.mca" afterPath="$PROJECT_DIR$/TestServer/world_nether/DIM-1/region/r.0.-1.mca" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_nether/DIM-1/region/r.0.0.mca" afterPath="$PROJECT_DIR$/TestServer/world_nether/DIM-1/region/r.0.0.mca" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_nether/data/villages_nether.dat" afterPath="$PROJECT_DIR$/TestServer/world_nether/data/villages_nether.dat" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_nether/level.dat" afterPath="$PROJECT_DIR$/TestServer/world_nether/level.dat" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_nether/level.dat_old" afterPath="$PROJECT_DIR$/TestServer/world_nether/level.dat_old" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_nether/session.lock" afterPath="$PROJECT_DIR$/TestServer/world_nether/session.lock" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_the_end/DIM1/region/r.-1.-1.mca" afterPath="$PROJECT_DIR$/TestServer/world_the_end/DIM1/region/r.-1.-1.mca" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_the_end/DIM1/region/r.-1.0.mca" afterPath="$PROJECT_DIR$/TestServer/world_the_end/DIM1/region/r.-1.0.mca" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_the_end/DIM1/region/r.0.-1.mca" afterPath="$PROJECT_DIR$/TestServer/world_the_end/DIM1/region/r.0.-1.mca" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_the_end/DIM1/region/r.0.0.mca" afterPath="$PROJECT_DIR$/TestServer/world_the_end/DIM1/region/r.0.0.mca" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_the_end/data/villages_end.dat" afterPath="$PROJECT_DIR$/TestServer/world_the_end/data/villages_end.dat" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_the_end/level.dat" afterPath="$PROJECT_DIR$/TestServer/world_the_end/level.dat" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_the_end/level.dat_old" afterPath="$PROJECT_DIR$/TestServer/world_the_end/level.dat_old" />
+      <change beforePath="$PROJECT_DIR$/TestServer/world_the_end/session.lock" afterPath="$PROJECT_DIR$/TestServer/world_the_end/session.lock" />
       <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/KingServerInfoMain.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/bstats/Metrics.java" afterPath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/bstats/Metrics.java" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/commands/Arguments.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/commands/ServerInfoCommand.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/events/ClickEvent.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/events/JoinEvent.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/events/LeaveEvent.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/CustomArgumentUtils.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/JsonManager.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/KingTuxUtils.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/SkullParser.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/config/ConfigManager.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/config/ConfigSettings.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/config/ConfigUpdater.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/mediagui/Items.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/mediagui/MediaGui.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/KingServerInfoMain.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$1$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$AdvancedBarChart.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$AdvancedPie.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$CustomChart.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$DrilldownPie.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$MultiLineChart.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$SimpleBarChart.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$SimplePie.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics$SingleLineChart.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/bstats/Metrics.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/commands/Arguments.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/commands/ServerInfoCommand.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/events/ClickEvent.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/events/JoinEvent.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/events/LeaveEvent.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/utils/CustomArgumentUtils.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/utils/JsonManager.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/utils/KingTuxUtils.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/utils/SkullParser.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/utils/config/ConfigManager.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/utils/config/ConfigSettings.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/utils/config/ConfigUpdater.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/utils/mediagui/Items.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/kingtux/kingserverinfo/utils/mediagui/MediaGui.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -143,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/src/me/kingtux/kingserverinfo/events/JoinEvent.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="258">
-              <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+              <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -159,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="72">
+              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -189,7 +145,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KingServerInfoMain.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KingServerInfoMain.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/me/kingtux/kingserverinfo/KingServerInfoMain.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="411">
@@ -271,7 +227,6 @@
         <option value="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/SkullParser.java" />
         <option value="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/bstats/Metrics.java" />
         <option value="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/config/ConfigUpdater.kt" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/commands/Arguments.kt" />
         <option value="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/mediagui/MediaGui.kt" />
         <option value="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/config/ConfigManager.kt" />
@@ -280,6 +235,7 @@
         <option value="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/commands/ServerInfoCommand.kt" />
         <option value="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/utils/config/ConfigSettings.kt" />
         <option value="$PROJECT_DIR$/src/me/kingtux/kingserverinfo/KingServerInfoMain.kt" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -576,7 +532,7 @@
       <workItem from="1518458843649" duration="1072000" />
       <workItem from="1518460750263" duration="641000" />
       <workItem from="1518789731214" duration="1564000" />
-      <workItem from="1519999010929" duration="3117000" />
+      <workItem from="1519999010929" duration="3521000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit!">
       <created>1511060632579</created>
@@ -739,11 +695,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518790228030</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Kotlin">
+      <created>1520002462320</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1520002462320</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23776000" />
+    <option name="totallyTimeSpent" value="24180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -836,7 +799,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="First Commit!" />
     <MESSAGE value="Setup Maven." />
     <MESSAGE value="Config should be done." />
@@ -858,7 +822,8 @@
     <MESSAGE value="Update 1.2 :)" />
     <MESSAGE value="Move to paper :)" />
     <MESSAGE value="Back to Regular Spigot :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Back to Regular Spigot :)" />
+    <MESSAGE value="Kotlin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kotlin" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1021,7 +986,7 @@
         <state relative-caret-position="18">
           <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding>
-            <marker date="1519999993573" expanded="true" signature="721:727" ph="{...}" />
+            <marker date="1520002455428" expanded="true" signature="717:723" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1039,7 +1004,7 @@
         <state relative-caret-position="702">
           <caret line="39" column="7" lean-forward="false" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
           <folding>
-            <marker date="1519999993339" expanded="true" signature="1113:1119" ph="{...}" />
+            <marker date="1520002455568" expanded="true" signature="1104:1110" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1084,14 +1049,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/me/kingtux/kingserverinfo/bstats/Metrics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1111,7 +1068,7 @@
     <entry file="file://$PROJECT_DIR$/src/me/kingtux/kingserverinfo/events/JoinEvent.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
-          <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1144,6 +1101,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding />
         </state>
       </provider>
