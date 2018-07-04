@@ -3,9 +3,9 @@
     <output-path>$PROJECT_DIR$/TestServer/plugins</output-path>
     <root id="archive" name="KingServerInfoBetaBuild.jar">
       <element id="module-output" name="KingServerInfo" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/resources/plugin.yml" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/resources/config.yml" />
-      <element id="file-copy" path="$PROJECT_DIR$/src/resources/CustomArguments.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/CustomArguments.yml" />
     </root>
   </artifact>
 </component>
