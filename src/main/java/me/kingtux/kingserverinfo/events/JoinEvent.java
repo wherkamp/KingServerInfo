@@ -1,0 +1,39 @@
+package me.kingtux.kingserverinfo.events;
+
+import java.util.List;
+import me.clip.placeholderapi.PlaceholderAPI;
+import me.kingtux.kingserverinfo.KingServerInfoMain;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.OfflinePlayer;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
+
+public class JoinEvent implements Listener {
+
+  private KingServerInfoMain plugin;
+
+  public JoinEvent(KingServerInfoMain pl) {
+    plugin = pl;
+  }
+
+  @EventHandler
+  public void playerJoinEvent(PlayerJoinEvent e) {
+
+    Player player = e.getPlayer();
+    List<String> onJoinBroudcastMessage = plugin.getConfigSettings().getOnJoinBroudcastMessage();
+    for (String s : onJoinBroudcastMessage) {
+      String PlaceHolderMessage = PlaceholderAPI.setPlaceholders(((OfflinePlayer) player), s);
+      Bukkit.getServer().broadcastMessage(ChatColor.translateAlternateColorCodes('&',
+          plugin.getConfigSettings().getPrefix() + " " + PlaceHolderMessage));
+    }
+    List<String> onJoinPersonalMessage = plugin.getConfigSettings().getOnJoinPersonalMessage();
+    for (String s : onJoinPersonalMessage) {
+      String PlaceHolderMessage = PlaceholderAPI.setPlaceholders(((OfflinePlayer) player), s);
+      player.sendMessage(ChatColor.translateAlternateColorCodes('&',
+          plugin.getConfigSettings().getPrefix() + " " + PlaceHolderMessage));
+    }
+  }
+}
