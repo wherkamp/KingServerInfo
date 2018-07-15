@@ -1,23 +1,23 @@
 <DOCTYPE HTML>
-    <html>
-    <head>
-        <title>CustomArguments.yml</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/customargs.css">
+  <html>
+  <head>
+    <title>CustomArguments.yml</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/customargs.css">
 
-    </head>
+  </head>
 
-    <body>
-    <h1>How to configure CustomArguments.yml in KingServerInfo</h1>
-    <div id="custom-arg-rules">
-        <h3>Rules for making a custom argument</h3>
-        <ol id="rules-list">
-            <li>Every Arument Must Have a Description</li>
-            <li>Arguments must be real characters</li>
-        </ol>
-    </div>
-    <h3>This is the default CustomArguments.yml</h3>
-    <br>
-    <pre id="default-code">
+  <body>
+  <h1>How to configure CustomArguments.yml in KingServerInfo</h1>
+  <div id="custom-arg-rules">
+    <h3>Rules for making a custom argument</h3>
+    <ol id="rules-list">
+      <li>Every Arument Must Have a Description</li>
+      <li>Arguments must be real characters</li>
+    </ol>
+  </div>
+  <h3>This is the default CustomArguments.yml</h3>
+  <br>
+  <pre id="default-code">
 #Everyone New Arguments must be one word long and will work using equalsIgnoreCase()
 #Permissions will be kingserverinfo.command.{argument}
 #PlaceholderAPI placeholders are allowed
@@ -38,83 +38,89 @@ Arguments:
       Description: 'This will answers some basic questions.'
         
         </pre>
-    <h3>List of tasks you can add inside of a custom argument</h3>
-    <br>
-    <ol id="possible-jobs">
+  <h3>List of tasks you can add inside of a custom argument</h3>
+  <br>
+  <ol id="possible-jobs">
 
-        <li>Player-Message: will send a message to the player</li>
-        <li>Player-Commands: will make the player run a command</li>
-        <li>Broudcast-Message: Will broudcast a message to the chat</li>
-        <li>Console-COmmands: Will have the console run a commmand</li>
-        <li>Alias will add alias's to the argument</li>
-        <li>Any PlaceholderAPI placeholder?</li>
+    <li>Player-Message: will send a message to the player</li>
+    <li>Player-Commands: will make the player run a command</li>
+    <li>Broudcast-Message: Will broudcast a message to the chat</li>
+    <li>Console-COmmands: Will have the console run a commmand</li>
+    <li>Alias will add alias's to the argument</li>
+    <li>Any PlaceholderAPI placeholder?</li>
 
-    </ol>
-    <div id="add-argument">
-        <h3>This is the format of a new argument</h3>
-        <pre>
+  </ol>
+  <div id="add-argument">
+    <h3>This is the format of a new argument</h3>
+    <pre>
             hello: <--- The name
                Description: This will be the description
                <--- Any other jobs such at Alias or Player-Message
             </pre>
 
 
-    </div>
+  </div>
 
 
-    </body>
-    <style>
-            h1{
-    text-align: center;
-}
-body{
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 5px;
-}
-#default-code{
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    width: 45%;
-    background-color: lightgray;
-    padding: 10px;
-}
-#possible-jobs{
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    width: 29%;
-}
-#custom-arg-rules{
+  </body>
+  <style>
+    h1 {
+      text-align: center;
+    }
 
-    position: absolute;
-    top: 125px;
-    right: 35px;
-    width: 25%;
-    padding: 10px;
-    border-style: solid;
-    border-width: 1px;
-}
-#rules-list{
-    padding: 35px;
-    border-width: 1px;
-    border-style: solid;
-    border-color:lightblue
-}
-#add-argument{
-    
-    position: absolute;
-    top: 525px;
-    right: 35px;
-    width: 25%;
-    border-color: black;
-    border-style: solid;
-    border-width: 2px;
-    width: 46%;
-}
-        
+    body {
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 5px;
+    }
 
-    </style>
-    </html>
+    #default-code {
+      border-style: solid;
+      border-width: 2px;
+      border-color: black;
+      width: 45%;
+      background-color: lightgray;
+      padding: 10px;
+    }
+
+    #possible-jobs {
+      border-style: solid;
+      border-width: 2px;
+      border-color: black;
+      width: 29%;
+    }
+
+    #custom-arg-rules {
+
+      position: absolute;
+      top: 125px;
+      right: 35px;
+      width: 25%;
+      padding: 10px;
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    #rules-list {
+      padding: 35px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: lightblue
+    }
+
+    #add-argument {
+
+      position: absolute;
+      top: 525px;
+      right: 35px;
+      width: 25%;
+      border-color: black;
+      border-style: solid;
+      border-width: 2px;
+      width: 46%;
+    }
+
+
+  </style>
+  </html>
 </DOCTYPE>

@@ -10,7 +10,6 @@ import me.kingtux.kingserverinfo.events.LeaveEvent;
 import me.kingtux.kingserverinfo.utils.config.ConfigManager;
 import me.kingtux.kingserverinfo.utils.config.ConfigSettings;
 import me.kingtux.kingserverinfo.utils.mediagui.MediaGui;
-import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandMap;
@@ -32,7 +31,6 @@ public class KingServerInfoMain extends JavaPlugin {
               configSettings.getPrefix() + " Successfully Got the Config and Settings"));
       try {
         final Field bukkitCommandMap = Bukkit.getServer().getClass().getDeclaredField("commandMap");
-
         bukkitCommandMap.setAccessible(true);
         CommandMap commandMap = (CommandMap) bukkitCommandMap.get(Bukkit.getServer());
         commandMap.register(configSettings.getServerInfoCommand(),
@@ -44,8 +42,7 @@ public class KingServerInfoMain extends JavaPlugin {
       }
       enableEvents();
       mediaGui = new MediaGui(this);
-      Metrics metrics = new Metrics(this);
-
+//      Metrics metrics = new Metrics(this);
 
     } else {
       getLogger().log(Level.SEVERE, "I find your lack of the PlaceHolderAPI disturbing.");

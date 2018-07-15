@@ -10,21 +10,22 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public class LeaveEvent implements Listener {
-    private KingServerInfoMain plugin;
 
-    public LeaveEvent(KingServerInfoMain pl) {
-        plugin = pl;
-    }
+  private KingServerInfoMain plugin;
 
-    @EventHandler
-    public void playerLeaveEvent(PlayerQuitEvent e) {
-        Player player = e.getPlayer();
-        List<String> leaveMessage = plugin.getConfigSettings().getOnLeaveMessage();
-        for (String s : leaveMessage) {
-            s = s.replace("{player}", player.getName());
-            Bukkit.getServer().broadcastMessage(
-                    ChatColor.translateAlternateColorCodes('&',
-                            plugin.getConfigSettings().getPrefix() + " " + s));
-        }
+  public LeaveEvent(KingServerInfoMain pl) {
+    plugin = pl;
+  }
+
+  @EventHandler
+  public void playerLeaveEvent(PlayerQuitEvent e) {
+    Player player = e.getPlayer();
+    List<String> leaveMessage = plugin.getConfigSettings().getOnLeaveMessage();
+    for (String s : leaveMessage) {
+      s = s.replace("{player}", player.getName());
+      Bukkit.getServer().broadcastMessage(
+          ChatColor.translateAlternateColorCodes('&',
+              plugin.getConfigSettings().getPrefix() + " " + s));
     }
+  }
 }

@@ -59,7 +59,7 @@ Media:
             Clickable: false
          Icon:
             Item:
-               Item-Type: WOOL
+               Item-Type: BLACK_WOOL
                Display-Name: '&2Welcome to our server!'
                Lore:
                   - '&3Lore'
@@ -83,7 +83,7 @@ Media:
             Clickable: false
          Icon:
             Item:
-               Item-Type: WOOL
+               Item-Type: BLACK_WOOL
                Display-Name: '&2Welcome to our server!'
                Lore:
                   - '&3Lore'
@@ -93,7 +93,7 @@ Media:
             Clickable: false
          Icon:
             Item:
-               Item-Type: WOOL
+               Item-Type: WHITE_WOOL
                Display-Name: '&2Welcome to our server!'
                Lore:
                   - '&3Lore'
@@ -103,7 +103,7 @@ Media:
             Clickable: false
          Icon:
             Item:
-               Item-Type: WOOL
+               Item-Type: BLACK_WOOL
                Display-Name: '&2Welcome to our server!'
                Lore:
                   - '&3Lore'
@@ -113,7 +113,7 @@ Media:
             Clickable: false
          Icon:
             Item:
-               Item-Type: WOOL
+               Item-Type: BLACK_WOOL
                Display-Name: '&2Welcome to our server!'
                Lore:
                   - '&3Lore'
@@ -123,7 +123,7 @@ Media:
             Clickable: false
          Icon:
             Item:
-               Item-Type: WOOL
+               Item-Type: BLACK_WOOL
                Display-Name: '&2Welcome to our server!'
                Lore:
                   - '&3Lore'
@@ -133,7 +133,7 @@ Media:
             Clickable: false
          Icon:
             Item:
-               Item-Type: WOOL
+               Item-Type: BLACK_WOOL
                Display-Name: '&2Welcome to our server!'
                Lore:
                   - '&3Lore'

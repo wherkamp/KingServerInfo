@@ -6,42 +6,37 @@ import org.bukkit.ChatColor;
 
 public class KingTuxUtils {
 
-    /**
-     * @param oldList
-     * @return List with Color codes added!
-     */
-    public static List<String> color(List<String> oldList) {
-        List<String> newString = new ArrayList<>();
-        for (String s : oldList) {
-            newString.add(ChatColor.translateAlternateColorCodes('&', s));
-        }
-        return newString;
+  /**
+   * @return List with Color codes added!
+   */
+  public static List<String> color(List<String> oldList) {
+    List<String> newString = new ArrayList<>();
+    for (String s : oldList) {
+      newString.add(ChatColor.translateAlternateColorCodes('&', s));
     }
+    return newString;
+  }
 
-    /**
-     * @param oldString
-     * @return new String with colors!
-     */
-    public static String color(String oldString) {
-        String newString = ChatColor.translateAlternateColorCodes('&', oldString);
-        return newString;
+  /**
+   * @return new String with colors!
+   */
+  public static String color(String oldString) {
+    String newString = ChatColor.translateAlternateColorCodes('&', oldString);
+    return newString;
+  }
+
+  /**
+   * @return List with the String replaced out of it!
+   */
+  public static List<String> replaceList(List<String> oldList, String oldString, String newString) {
+
+    List<String> newList = new ArrayList<>();
+    if (oldList == null) {
+      return newList;
     }
-
-    /**
-     * @param oldList
-     * @param oldString
-     * @param newString
-     * @return List with the String replaced out of it!
-     */
-    public static List<String> replaceList(List<String> oldList, String oldString, String newString) {
-
-        List<String> newList = new ArrayList<>();
-        if (oldList == null) {
-            return newList;
-        }
-        for (String s : oldList) {
-            newList.add(s.replace(oldString, newString));
-        }
-        return newList;
+    for (String s : oldList) {
+      newList.add(s.replace(oldString, newString));
     }
+    return newList;
+  }
 }

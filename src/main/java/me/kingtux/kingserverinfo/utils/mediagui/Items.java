@@ -5,43 +5,45 @@ import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.inventory.ItemStack;
 
 public class Items {
-    private int position;
-    private TextComponent link;
-    private ItemStack item;
-    private Boolean clickable;
+
+  private int position;
+  private TextComponent link;
+  private ItemStack item;
+  private Boolean clickable;
 
 
-    public Items(int position, ItemStack itemStack, String link, String beforeLinkMessage, Boolean clickable) {
-        this.position = position;
-        item = itemStack;
-        this.link = JsonManager.makeLinkText(beforeLinkMessage, link);
-        this.clickable = clickable;
-    }
+  public Items(int position, ItemStack itemStack, String link, String beforeLinkMessage,
+      Boolean clickable) {
+    this.position = position;
+    item = itemStack;
+    this.link = JsonManager.makeLinkText(beforeLinkMessage, link);
+    this.clickable = clickable;
+  }
 
-    @Override
-    public String toString() {
-        return "Items{" +
-                "position=" + position +
-                ", link=" + link.toString() +
-                ", item=" + item.toString() +
-                ", clickable=" + clickable +
-                '}';
-    }
+  @Override
+  public String toString() {
+    return "Items{" +
+        "position=" + position +
+        ", link=" + link.toString() +
+        ", item=" + item.toString() +
+        ", clickable=" + clickable +
+        '}';
+  }
 
 
-    public int getPosition() {
-        return position;
-    }
+  public int getPosition() {
+    return position;
+  }
 
-    public TextComponent getLink() {
-        return link;
-    }
+  public TextComponent getLink() {
+    return link;
+  }
 
-    public Boolean isClickable() {
-        return clickable;
-    }
+  public Boolean isClickable() {
+    return clickable;
+  }
 
-    public ItemStack getItem() {
-        return item;
-    }
+  public ItemStack getItem() {
+    return item;
+  }
 }

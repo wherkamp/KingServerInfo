@@ -87,11 +87,20 @@ public class ConfigSettings {
 
         for (final String ItemName : configManager.getMainConfig().getConfigurationSection("Media.Items").getKeys(false)) {
             String Position = "Media.Items." + ItemName;
-            ItemStack itemStack;
+          ItemStack itemStack = null;
             if (configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type").contains(":UUID:")) {
                 itemStack = SkullParser.createSkull(configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type"));
             } else {
-                itemStack = new ItemStack(Material.getMaterial(configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type")));
+              Material material = Material.getMaterial(
+                  configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type"));
+              if (material != null) {
+                itemStack = new ItemStack(material);
+              } else {
+                itemStack = new ItemStack(Material.BARRIER);
+                System.out.println(
+                    configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type")
+                        + " is not a material");
+              }
             }
             String displayName = configManager.getMainConfig().getString(Position + ".Icon.Item.Display-Name");
             List<String> lore = configManager.getMainConfig().getStringList(Position + ".Item.Icon.Lore");
@@ -102,6 +111,7 @@ public class ConfigSettings {
             Items items = new Items(configManager.getMainConfig().getInt(Position + ".Icon.Position"), itemStack, configManager.getMainConfig().getString(Position + ".Link.Link"), configManager.getMainConfig().getString(Position + ".Link.Before-Link-Message"), configManager.getMainConfig().getBoolean(Position + ".Link.Clickable"));
             //System.out.println(items.toString());
             guiItems.add(items);
+
         }
     }
 

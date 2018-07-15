@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.KingTux.serverinfo</groupId>
   <artifactId>KingServerInfo</artifactId>
-  <version>1.0</version>
+  <version>1.2</version>
   <description>KingServerInfo is a ServerInfo plugin</description>
   <scm>
     <url>https://github.com/wherkamp/KingServerInfo</url>
@@ -77,7 +77,7 @@
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot</artifactId>
-      <version>1.12.2-R0.1-SNAPSHOT</version>
+      <version>1.13-pre7-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>

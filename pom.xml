@@ -7,7 +7,7 @@
   <groupId>net.KingTux.serverinfo</groupId>
   <artifactId>KingServerInfo</artifactId>
   <description>KingServerInfo is a ServerInfo plugin</description>
-  <version>1.0</version>
+  <version>1.2</version>
   <packaging>jar</packaging>
   <scm>
     <url>https://github.com/wherkamp/KingServerInfo</url>
@@ -19,7 +19,7 @@
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot</artifactId>
-      <version>1.12.2-R0.1-SNAPSHOT</version>
+      <version>1.13-pre7-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -98,8 +98,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
 
