@@ -8,34 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="714184b9-584e-4c7b-9d62-e69d3175f6ff" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/KingServerInfo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KingServerInfo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_1_12_2_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__me_clip_placeholderapi_2_9_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help/config.yml.html" beforeDir="false" afterPath="$PROJECT_DIR$/help/config.yml.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help/customarguments.yml.html" beforeDir="false" afterPath="$PROJECT_DIR$/help/customarguments.yml.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/help/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/KingServerInfoMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/KingServerInfoMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/commands/Arguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/commands/Arguments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/commands/ServerInfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/commands/ServerInfoCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/events/ClickEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/events/ClickEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/events/LeaveEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/events/LeaveEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/CustomArgumentUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/CustomArgumentUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/JsonManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/JsonManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/KingTuxUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/KingTuxUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/SkullParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/SkullParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/mediagui/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/mediagui/Items.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/mediagui/MediaGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/mediagui/MediaGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,77 +27,80 @@
       </map>
     </option>
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="265850393">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.88" value="1" />
+          <entry key="project.open.time.99" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="613" />
+          <entry key="xml" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="613" />
+          <entry key="XML" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="JoinEvent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/events/JoinEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfigManager.java" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="918">
               <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomArgumentUtils.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/CustomArgumentUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="68" column="3" lean-forward="true" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
+            <state relative-caret-position="1098">
+              <caret line="68" column="3" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigSettings.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigSettings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="1692">
               <caret line="110" selection-start-line="110" selection-end-line="110" />
               <folding>
-                <element signature="e#6842#6843#0" expanded="true" />
-                <element signature="e#6871#6872#0" expanded="true" />
-                <element signature="e#6915#6916#0" expanded="true" />
-                <element signature="e#6955#6956#0" expanded="true" />
-                <element signature="e#7003#7004#0" expanded="true" />
-                <element signature="e#7047#7048#0" expanded="true" />
-                <element signature="e#7099#7100#0" expanded="true" />
-                <element signature="e#7141#7142#0" expanded="true" />
-                <element signature="e#7179#7180#0" expanded="true" />
-                <element signature="e#7207#7208#0" expanded="true" />
-                <element signature="e#7262#7263#0" expanded="true" />
-                <element signature="e#7307#7308#0" expanded="true" />
-                <element signature="e#7361#7362#0" expanded="true" />
-                <element signature="e#7405#7406#0" expanded="true" />
-                <element signature="e#7452#7453#0" expanded="true" />
-                <element signature="e#7489#7490#0" expanded="true" />
-                <element signature="e#7521#7522#0" expanded="true" />
-                <element signature="e#7549#7550#0" expanded="true" />
-                <element signature="e#7584#7585#0" expanded="true" />
                 <element signature="e#7615#7616#0" expanded="true" />
-                <element signature="e#7648#7649#0" expanded="true" />
-                <element signature="e#7680#7681#0" expanded="true" />
-                <element signature="e#7725#7726#0" expanded="true" />
-                <element signature="e#7756#7757#0" expanded="true" />
-                <element signature="e#7792#7793#0" expanded="true" />
-                <element signature="e#7824#7825#0" expanded="true" />
+                <element signature="e#7659#7660#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KingServerInfoMain.java" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/KingServerInfoMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="41" />
+            <state relative-caret-position="384">
+              <caret line="78" column="32" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,7 +108,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerInfoCommand.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/SkullParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/commands/ServerInfoCommand.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1008">
@@ -135,7 +138,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomArguments.yml" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/CustomArguments.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
@@ -144,29 +147,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestServer/plugins/KingServerInfo/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="1710">
               <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MediaGui.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/mediagui/MediaGui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="342">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -242,7 +236,6 @@
         <option value="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/events/LeaveEvent.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/mediagui/Items.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/SkullParser.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/TestServer/eula.txt" />
         <option value="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/CustomArgumentUtils.java" />
@@ -250,6 +243,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/config.yml" />
         <option value="$PROJECT_DIR$/TestServer/plugins/KingServerInfo/config.yml" />
         <option value="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/commands/ServerInfoCommand.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/KingServerInfoMain.java" />
       </list>
     </option>
@@ -267,14 +261,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="138" />
-    <option name="y" value="27" />
-    <option name="width" value="1371" />
-    <option name="height" value="841" />
+    <option name="x" value="20" />
+    <option name="y" value="102" />
+    <option name="width" value="1580" />
+    <option name="height" value="661" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -370,34 +361,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="KingServerInfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KingServerInfo" type="462c0819:PsiDirectoryNode" />
-              <item name="TestServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KingServerInfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KingServerInfo" type="462c0819:PsiDirectoryNode" />
-              <item name="TestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="KingServerInfo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KingServerInfo" type="462c0819:PsiDirectoryNode" />
-              <item name="TestServer" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="KingServerInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538401238395" />
     <property name="last_opened_file_path" value="$USER_HOME$/Spigots/MainSpigot/server.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -426,32 +399,28 @@
   <component name="RunManager" selected="JAR Application.TestSysten">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="TestSysten" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$USER_HOME$/Spigots/MainSpigot/server.jar" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestServer" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <method>
+      <method v="2">
         <option name="BuildArtifacts" enabled="true">
           <artifact name="KingServerInfoBetaBuild" />
         </option>
@@ -481,38 +450,20 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="JAR Application.TestSysten" />
       <item itemvalue="Maven.Build" />
     </list>
-  </component>
-  <component name="SbtLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -532,6 +483,9 @@
       <workItem from="1518789731214" duration="457000" />
       <workItem from="1530740535917" duration="1451000" />
       <workItem from="1531625428506" duration="2710000" />
+      <workItem from="1538400171822" duration="1177000" />
+      <workItem from="1538446708133" duration="726000" />
+      <workItem from="1538529742493" duration="578000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit!">
       <created>1511060632579</created>
@@ -698,92 +652,92 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24055000" />
+    <option name="totallyTimeSpent" value="26536000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <frame x="0" y="27" width="1600" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32884097" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info id="Image Layers" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="18" sideWeight="0.5025" side_tool="true" weight="0.32893" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="17" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3301887" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4975" visible="true" weight="0.32884097" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20780094" />
-      <window_info anchor="right" id="Database" order="10" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32893" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21713917" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32893" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4975" weight="0.32884097" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3989432" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Salesforce" order="7" />
-      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32893" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="SFDX" order="9" />
       <window_info anchor="bottom" id="Log Manager" order="10" />
-      <window_info anchor="right" x="136" y="227" width="1400" height="673" id="Documentation" order="9" type="FLOATING" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="IntelliGuard" order="15" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Metrics" order="19" weight="0.32893" />
-      <window_info id="Learn" order="7" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Execute Anonymous" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3301887" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32884097" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32893" />
+      <window_info anchor="bottom" id="IntelliGuard" order="15" />
       <window_info anchor="bottom" id="CheckStyle" order="16" />
-      <window_info anchor="right" id="Cargo" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Database Changes" order="17" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="18" sideWeight="0.5025" side_tool="true" weight="0.32893" />
+      <window_info anchor="bottom" id="Metrics" order="19" weight="0.32893" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="right" id="Cargo" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" x="136" y="227" width="1400" height="673" id="Documentation" order="9" type="FLOATING" />
+      <window_info anchor="right" id="Database" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="bottom" id="IntelliGuard" order="15" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20780094" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Metrics" order="19" weight="0.32893" />
-      <window_info anchor="right" id="Cargo" order="5" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Image Layers" order="5" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4975" weight="0.32884097" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32893" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4975" weight="0.32884097" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3989432" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Salesforce" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="SFDX" order="9" />
       <window_info anchor="bottom" id="Log Manager" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32893" />
       <window_info anchor="bottom" id="Execute Anonymous" order="11" />
-      <window_info anchor="bottom" id="CheckStyle" order="16" />
-      <window_info anchor="bottom" id="Event Log" order="18" sideWeight="0.5025" side_tool="true" weight="0.32893" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32891247" />
-      <window_info anchor="right" x="136" y="227" width="1400" height="673" id="Documentation" order="9" type="FLOATING" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20780094" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Database Changes" order="17" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3301887" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32891247" />
+      <window_info anchor="bottom" id="Inspection Results" order="14" weight="0.32893" />
+      <window_info anchor="bottom" id="IntelliGuard" order="15" />
+      <window_info anchor="bottom" id="CheckStyle" order="16" />
+      <window_info anchor="bottom" id="Database Changes" order="17" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="18" sideWeight="0.5025" side_tool="true" weight="0.32893" />
+      <window_info anchor="bottom" id="Metrics" order="19" weight="0.32893" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Salesforce" order="7" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32893" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info id="Learn" order="7" />
-      <window_info anchor="right" id="Database" order="10" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Cargo" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3989432" />
+      <window_info anchor="right" x="136" y="227" width="1400" height="673" id="Documentation" order="9" type="FLOATING" />
+      <window_info anchor="right" id="Database" order="10" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -839,50 +793,11 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/events/ClickEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="21" selection-start-line="21" selection-start-column="53" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/mediagui/Items.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/commands/ServerInfoCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/KingServerInfoMain.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigSettings.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigManager.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/resources/plugin.yml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/resources/config.yml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/commands/ServerInfoCommand.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/KingServerInfoMain.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigSettings.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/resources/plugin.yml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/resources/config.yml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/commands/ServerInfoCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/me/kingtux/kingserverinfo/events.java" />
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -964,24 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/SkullParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="101" column="21" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -989,13 +886,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestServer/eula.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TestServer/eula.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/events/ClickEvent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-116">
@@ -1013,80 +904,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot/1.13-pre7-R0.1-SNAPSHOT/spigot-1.13-pre7-R0.1-SNAPSHOT.jar!/org/bukkit/plugin/SimplePluginManager.class" />
+    <entry file="file://$PROJECT_DIR$/TestServer/plugins/KingServerInfo/config.yml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/events/JoinEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="918">
           <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/mediagui/MediaGui.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/CustomArgumentUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot/1.13-pre7-R0.1-SNAPSHOT/spigot-1.13-pre7-R0.1-SNAPSHOT.jar!/org/bukkit/plugin/SimplePluginManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10444">
-          <caret line="664" selection-start-line="664" selection-end-line="664" />
+        <state relative-caret-position="1098">
+          <caret line="68" column="3" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/config/ConfigSettings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="1692">
           <caret line="110" selection-start-line="110" selection-end-line="110" />
           <folding>
-            <element signature="e#6842#6843#0" expanded="true" />
-            <element signature="e#6871#6872#0" expanded="true" />
-            <element signature="e#6915#6916#0" expanded="true" />
-            <element signature="e#6955#6956#0" expanded="true" />
-            <element signature="e#7003#7004#0" expanded="true" />
-            <element signature="e#7047#7048#0" expanded="true" />
-            <element signature="e#7099#7100#0" expanded="true" />
-            <element signature="e#7141#7142#0" expanded="true" />
-            <element signature="e#7179#7180#0" expanded="true" />
-            <element signature="e#7207#7208#0" expanded="true" />
-            <element signature="e#7262#7263#0" expanded="true" />
-            <element signature="e#7307#7308#0" expanded="true" />
-            <element signature="e#7361#7362#0" expanded="true" />
-            <element signature="e#7405#7406#0" expanded="true" />
-            <element signature="e#7452#7453#0" expanded="true" />
-            <element signature="e#7489#7490#0" expanded="true" />
-            <element signature="e#7521#7522#0" expanded="true" />
-            <element signature="e#7549#7550#0" expanded="true" />
-            <element signature="e#7584#7585#0" expanded="true" />
             <element signature="e#7615#7616#0" expanded="true" />
-            <element signature="e#7648#7649#0" expanded="true" />
-            <element signature="e#7680#7681#0" expanded="true" />
-            <element signature="e#7725#7726#0" expanded="true" />
-            <element signature="e#7756#7757#0" expanded="true" />
-            <element signature="e#7792#7793#0" expanded="true" />
-            <element signature="e#7824#7825#0" expanded="true" />
+            <element signature="e#7659#7660#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/SkullParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+        <state relative-caret-position="252">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestServer/plugins/KingServerInfo/config.yml">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/events/JoinEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+        <state relative-caret-position="306">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1104,17 +969,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/CustomArgumentUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="68" column="3" lean-forward="true" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
+        <state relative-caret-position="1710">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/utils/mediagui/MediaGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/kingtux/kingserverinfo/KingServerInfoMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="41" column="41" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="41" />
+        <state relative-caret-position="384">
+          <caret line="78" column="32" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
