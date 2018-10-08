@@ -56,7 +56,6 @@ public class ConfigManager {
         e.printStackTrace();
       }
     }
-    new ConfigUpdater(getMainConfig()).updateConfig();
   }
 
   private double getVersion() {
