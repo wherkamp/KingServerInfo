@@ -1,9 +1,5 @@
 package me.kingtux.kingserverinfo.commands;
 
-import static org.bukkit.ChatColor.translateAlternateColorCodes;
-
-import java.util.ArrayList;
-import java.util.List;
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.kingtux.kingserverinfo.KingServerInfoMain;
 import me.kingtux.kingserverinfo.utils.CustomArgumentUtils;
@@ -14,6 +10,11 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.bukkit.ChatColor.translateAlternateColorCodes;
 
 public class ServerInfoCommand extends BukkitCommand {
 
@@ -47,7 +48,7 @@ public class ServerInfoCommand extends BukkitCommand {
 
   @Override
   public List<String> tabComplete(CommandSender sender, String alias, String[] args,
-      Location location) throws IllegalArgumentException {
+                                  Location location) throws IllegalArgumentException {
     List<String> a = new ArrayList<>();
     if (sender instanceof Player) {
       Player p = (Player) sender;
@@ -63,7 +64,7 @@ public class ServerInfoCommand extends BukkitCommand {
 
   @Override
   public List<String> tabComplete(CommandSender sender, String alias, String[] args)
-      throws IllegalArgumentException {
+          throws IllegalArgumentException {
     List<String> a = new ArrayList<>();
     if (sender instanceof Player) {
       Player p = (Player) sender;
@@ -100,10 +101,10 @@ public class ServerInfoCommand extends BukkitCommand {
           if (player.hasPermission(BasePerm + ".reload")) {
             plugin.reloadPlugin();
             player.sendMessage(translateAlternateColorCodes('&',
-                plugin.getConfigSettings().getPrefix() + " Config Reloaded"));
+                    plugin.getConfigSettings().getPrefix() + " Config Reloaded"));
           } else {
             player.sendMessage(translateAlternateColorCodes('&',
-                "You do not have permission to run this command"));
+                    "You do not have permission to run this command"));
           }
         } else if (args[0].equalsIgnoreCase("media")) {
           if (player.hasPermission(BasePerm + ".media")) {
@@ -127,21 +128,21 @@ public class ServerInfoCommand extends BukkitCommand {
           if (player.hasPermission(BasePerm + ".owner")) {
             player.sendMessage(translateAlternateColorCodes('&', "&2Our Owner is "));
             player.spigot().sendMessage(JsonManager.makeHoverableMessage(
-                plugin.getConfigSettings().getOwner(),
-                plugin.getConfigSettings().getOwnerInfo()));
+                    plugin.getConfigSettings().getOwner(),
+                    plugin.getConfigSettings().getOwnerInfo()));
           } else {
             player.sendMessage(ChatColor.DARK_RED + "You lack the permissions to do that");
           }
         } else if (args[0].equalsIgnoreCase("staff")) {
           if (player.hasPermission(BasePerm + ".staff")) {
             player.sendMessage(
-                translateAlternateColorCodes('&', "&2If the name is green the player is online!"));
+                    translateAlternateColorCodes('&', "&2If the name is green the player is online!"));
             for (String textComponent : plugin.getConfigSettings().getStaffList().keySet()) {
 
               player.spigot().sendMessage(
-                  JsonManager.makeHoverableMessage
-                      (textComponent,
-                          plugin.getConfigSettings().getStaffList().get(textComponent)));
+                      JsonManager.makeHoverableMessage
+                              (textComponent,
+                                      plugin.getConfigSettings().getStaffList().get(textComponent)));
 
             }
           } else {
@@ -150,18 +151,18 @@ public class ServerInfoCommand extends BukkitCommand {
         } else if (args[0].equalsIgnoreCase("help")) {
           if (player.hasPermission(BasePerm + ".help")) {
             String argumentHelp = "&2The Base Command is equal to /" + plugin.getConfigSettings()
-                .getServerInfoCommand() + ".\n" +
-                "&2 All the subs commands will be listed below." +
-                "\n &2 staff: &Awhich list all the staff" +
-                "\n &2 owner: &Awhich will list the owner" +
-                "\n &2 media: &Awhich will open the media gui" +
-                "\n &2 rules: &Awhich will list the rules" +
-                "\n &2 Just the Basecommand will list the general server info,\n";
+                    .getServerInfoCommand() + ".\n" +
+                    "&2 All the subs commands will be listed below." +
+                    "\n &2 staff: &Awhich list all the staff" +
+                    "\n &2 owner: &Awhich will list the owner" +
+                    "\n &2 media: &Awhich will open the media gui" +
+                    "\n &2 rules: &Awhich will list the rules" +
+                    "\n &2 Just the Basecommand will list the general server info,\n";
 
             for (Arguments arguments : plugin.getConfigSettings().getCustomArguments()) {
               argumentHelp =
-                  argumentHelp + arguments.getArgument() + ": &A" + arguments.getDescription()
-                      + ", \n &2";
+                      argumentHelp + arguments.getArgument() + ": &A" + arguments.getDescription()
+                              + ", \n &2";
             }
             player.sendMessage(translateAlternateColorCodes('&', argumentHelp));
 
@@ -176,7 +177,7 @@ public class ServerInfoCommand extends BukkitCommand {
               if (args[0].equalsIgnoreCase(arguments.getArgument())) {
                 InvalidArgument = false;
                 CustomArgumentUtils
-                    .doArgumentWork(arguments, player, plugin.getConfigSettings().getPrefix());
+                        .doArgumentWork(arguments, player, plugin.getConfigSettings().getPrefix());
                 break;
               } else if (arguments.getAlias() != null) {
                 if (InvalidArgument) {
@@ -185,7 +186,7 @@ public class ServerInfoCommand extends BukkitCommand {
                       InvalidArgument = false;
 
                       CustomArgumentUtils.doArgumentWork(arguments, player,
-                          plugin.getConfigSettings().getPrefix());
+                              plugin.getConfigSettings().getPrefix());
                       break;
                     }
                   }

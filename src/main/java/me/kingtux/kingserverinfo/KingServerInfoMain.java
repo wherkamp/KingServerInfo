@@ -2,12 +2,13 @@ package me.kingtux.kingserverinfo;
 
 
 import me.kingtux.kingserverinfo.commands.ServerInfoCommand;
+import me.kingtux.kingserverinfo.config.ConfigManager;
+import me.kingtux.kingserverinfo.config.ConfigSettings;
 import me.kingtux.kingserverinfo.events.ClickEvent;
 import me.kingtux.kingserverinfo.events.JoinEvent;
 import me.kingtux.kingserverinfo.events.LeaveEvent;
-import me.kingtux.kingserverinfo.utils.config.ConfigManager;
-import me.kingtux.kingserverinfo.utils.config.ConfigSettings;
-import me.kingtux.kingserverinfo.utils.mediagui.MediaGui;
+import me.kingtux.kingserverinfo.mediagui.MediaGui;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandMap;
@@ -30,13 +31,19 @@ public class KingServerInfoMain extends JavaPlugin {
             getLogger().log(Level.INFO,
                     ChatColor.translateAlternateColorCodes('&',
                             configSettings.getPrefix() + " Successfully Got the Config and Settings"));
-
+            try {
+                getCommmandMap().register(configSettings.getServerInfoCommand(),
+                        new ServerInfoCommand(configSettings.getServerInfoCommand(),
+                                configSettings.getServerInfoDescription(), this));
+            } catch (NullPointerException e) {
+                getLogger().severe("Could not register command shutting plugin down");
+                e.printStackTrace();
+                getServer().getPluginManager().disablePlugin(this);
+                return;
+            }
             enableEvents();
-            getCommmandMap().register(configSettings.getServerInfoCommand(),
-                    new ServerInfoCommand(configSettings.getServerInfoCommand(),
-                            configSettings.getServerInfoDescription(), this));
             mediaGui = new MediaGui(this);
-//      Metrics metrics = new Metrics(this);
+            Metrics metrics = new Metrics(this);
 
         } else {
             getLogger().log(Level.SEVERE, "I find your lack of the PlaceHolderAPI disturbing.");

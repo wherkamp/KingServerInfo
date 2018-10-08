@@ -1,18 +1,19 @@
-package me.kingtux.kingserverinfo.utils.config;
+package me.kingtux.kingserverinfo.config;
+
+import me.kingtux.kingserverinfo.commands.Arguments;
+import me.kingtux.kingserverinfo.mediagui.MediaGuiItem;
+import me.kingtux.kingserverinfo.utils.SkullParser;
+import me.kingtux.kingserverinfo.utils.TuxUtils;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
-import me.kingtux.kingserverinfo.commands.Arguments;
-import me.kingtux.kingserverinfo.utils.KingTuxUtils;
-import me.kingtux.kingserverinfo.utils.SkullParser;
-import me.kingtux.kingserverinfo.utils.mediagui.Items;
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 
 
 public class ConfigSettings {
@@ -22,21 +23,20 @@ public class ConfigSettings {
     private List<String> baseCommandDataInfo, rules, onJoinBroudcastMessage, onJoinPersonalMessage, onLeaveMessage;
 
     private Map<String, String> staffList;
-
-    public Map<String, String> getStaffList() {
-        return staffList;
-    }
-    private ArrayList<Items> guiItems;
-
+    private ArrayList<MediaGuiItem> guiItems;
     private ArrayList<Arguments> customArguments;
-
-    public ArrayList<Arguments> getCustomArguments() {
-        return customArguments;
-    }
 
     protected ConfigSettings(ConfigManager configManager) {
         this.configManager = configManager;
         getAllSettings();
+    }
+
+    public Map<String, String> getStaffList() {
+        return staffList;
+    }
+
+    public ArrayList<Arguments> getCustomArguments() {
+        return customArguments;
     }
 
     public void getAllSettings() {
@@ -52,7 +52,7 @@ public class ConfigSettings {
         owner = configManager.getMainConfig().getString("Staff.Owner.Owner-Name");
         ownerInfo = configManager.getMainConfig().getString("Staff.Owner.Owner-Info");
         mediaSize = configManager.getMainConfig().getInt("Media.Size");
-        guiTitle = KingTuxUtils.color(configManager.getMainConfig().getString("Media.Title"));
+        guiTitle = TuxUtils.color(configManager.getMainConfig().getString("Media.Title"));
 
 
         getMediaGuifromConfig();
@@ -87,28 +87,29 @@ public class ConfigSettings {
 
         for (final String ItemName : configManager.getMainConfig().getConfigurationSection("Media.Items").getKeys(false)) {
             String Position = "Media.Items." + ItemName;
-          ItemStack itemStack = null;
-            if (configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type").contains(":UUID:")) {
+            ItemStack itemStack;
+            if (configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type").toLowerCase().contains(":uuid:") ||
+                    configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type").toLowerCase().contains(":headlib:")) {
                 itemStack = SkullParser.createSkull(configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type"));
             } else {
-              Material material = Material.getMaterial(
-                  configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type"));
-              if (material != null) {
-                itemStack = new ItemStack(material);
-              } else {
-                itemStack = new ItemStack(Material.BARRIER);
-                System.out.println(
-                    configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type")
-                        + " is not a material");
-              }
+                Material material = Material.getMaterial(
+                        configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type"));
+                if (material != null) {
+                    itemStack = new ItemStack(material);
+                } else {
+                    itemStack = new ItemStack(Material.BARRIER);
+                    System.out.println(
+                            configManager.getMainConfig().getString(Position + ".Icon.Item.Item-Type")
+                                    + " is not a material");
+                }
             }
             String displayName = configManager.getMainConfig().getString(Position + ".Icon.Item.Display-Name");
             List<String> lore = configManager.getMainConfig().getStringList(Position + ".Item.Icon.Lore");
             ItemMeta itemMeta = itemStack.getItemMeta();
-            itemMeta.setDisplayName(KingTuxUtils.color(displayName));
-            itemMeta.setLore(KingTuxUtils.color(lore));
+            itemMeta.setDisplayName(TuxUtils.color(displayName));
+            itemMeta.setLore(TuxUtils.color(lore));
             itemStack.setItemMeta(itemMeta);
-            Items items = new Items(configManager.getMainConfig().getInt(Position + ".Icon.Position"), itemStack, configManager.getMainConfig().getString(Position + ".Link.Link"), configManager.getMainConfig().getString(Position + ".Link.Before-Link-Message"), configManager.getMainConfig().getBoolean(Position + ".Link.Clickable"));
+            MediaGuiItem items = new MediaGuiItem(configManager.getMainConfig().getInt(Position + ".Icon.Position"), itemStack, configManager.getMainConfig().getString(Position + ".Link.Link"), configManager.getMainConfig().getString(Position + ".Link.Before-Link-Message"), configManager.getMainConfig().getBoolean(Position + ".Link.Clickable"));
             //System.out.println(items.toString());
             guiItems.add(items);
 
@@ -180,7 +181,7 @@ public class ConfigSettings {
         return mediaSize;
     }
 
-    public ArrayList<Items> getGuiItems() {
+    public ArrayList<MediaGuiItem> getGuiItems() {
         return guiItems;
     }
 

@@ -1,12 +1,13 @@
-package me.kingtux.kingserverinfo.utils.config;
+package me.kingtux.kingserverinfo.config;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
 import me.kingtux.kingserverinfo.KingServerInfoMain;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
 
 public class ConfigManager {
 
